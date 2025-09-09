@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html { scroll-behavior: smooth; }
+
+/* Glassmorphism */
+.glass {
+  background: rgba(255,255,255,0.06);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.neumorph {
+  background: #0b0f1a;
+  border-radius: 18px;
+  box-shadow: 9px 9px 18px #070a12, -9px -9px 18px #0f1422;
+}
+
+.section {
+  @apply relative py-24 md:py-32;
+}
+
+.container {
+  @apply max-w-7xl mx-auto px-4 md:px-6 lg:px-8;
+}
+
+.h1 {
+  @apply font-heading text-4xl md:text-6xl font-extrabold tracking-tight;
+}
+.h2 {
+  @apply font-heading text-3xl md:text-4xl font-bold;
+}
+.p {
+  @apply font-body text-slate-300;
+}
+
+.btn {
+  @apply inline-flex items-center gap-2 px-5 py-3 rounded-xl font-medium transition-all duration-300;
+}
+.btn-primary {
+  @apply relative overflow-hidden bg-gradient-to-r from-sky-500 to-violet-600 text-white hover:brightness-110 shadow-lg shadow-violet-900/20;
+}
+.btn-ghost {
+  @apply relative overflow-hidden bg-white/5 text-white border border-white/10 hover:bg-white/10 shadow-md shadow-black/10;
+}
+.btn:focus-visible { @apply outline-none ring-2 ring-violet-500/60 ring-offset-2 ring-offset-slate-950; }
+.btn:hover { transform: translateY(-1px); }
+.btn:active { transform: translateY(0); filter: brightness(0.98); }
+
+/* Shine effect */
+.btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, transparent 30%, rgba(255,255,255,0.25) 50%, transparent 70%);
+  transform: translateX(-120%);
+}
+.btn:hover::before { transition: transform 700ms ease; transform: translateX(120%); }
+
+/* Subtle silver glow on hover (applies to all buttons) */
+.btn { will-change: transform, box-shadow; }
+.btn:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25),
+              0 0 10px rgba(255, 255, 255, 0.14),
+              0 0 22px rgba(200, 220, 255, 0.12);
+}
+
+/* Reusable utility if needed elsewhere */
+.hover-glow-silver:hover {
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.14),
+              0 0 22px rgba(200, 220, 255, 0.12);
+}
+
+/* Light silver glow for glass cards */
+.glass:hover {
+  transform: translateY(-2px);
+  transition: transform 200ms ease, box-shadow 300ms ease;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25),
+              0 0 8px rgba(255, 255, 255, 0.10),
+              0 0 18px rgba(200, 220, 255, 0.10);
+}
+.nav-blur { @apply backdrop-blur-md bg-slate-900/60 border-b border-white/10; }
+
+/* Accessibility: Respect user reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  .glass:hover { transform: none !important; }
+}

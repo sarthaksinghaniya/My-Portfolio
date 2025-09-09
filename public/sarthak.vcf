@@ -1,0 +1,17 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Singhaniya;Sarthak;;;
+FN:Sarthak Singhaniya
+EMAIL;TYPE=INTERNET;TYPE=WORK:sarthaksinghaniya789@gmail.com
+TEL;TYPE=CELL:+916387860126
+URL:https://reviber.netlify.app
+item1.URL:https://www.linkedin.com/in/sarthak-singhaniya-a4ab9a323
+item1.X-ABLabel:LinkedIn
+item2.URL:https://github.com/sarthaksinghaniya
+item2.X-ABLabel:GitHub
+TITLE:Full-Stack Python & AI Developer
+ORG:Student — Babu Banarasi Das University
+NOTE:Seeking Growth 🌱 | AI/ML | Full-Stack | Data Visualization
+item3.URL:https://www.instagram.com/sarthak_shubh_?igsh=MWtsbGFnZHljejRoZA==
+item3.X-ABLabel:Instagram
+END:VCARD
