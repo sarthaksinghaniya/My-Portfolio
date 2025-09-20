@@ -43,6 +43,43 @@ export default function Skills() {
             </motion.div>
           ))}
         </motion.div>
+
+        {/* Moving icons marquee below skills */}
+        {(() => {
+          const emojiMap = {
+            'Python': '🐍', 'Flask': '🧪', 'Django': '🌿', 'FastAPI': '⚡', 'Streamlit': '📊',
+            'Machine Learning': '🤖', 'NLP': '🗣️', 'Data Visualization': '📈', 'Excel Analytics': '📊',
+            'HTML': '🌐', 'CSS': '🎨', 'JavaScript': '🟨', 'React': '⚛️', 'REST APIs': '🔗', 'MERN Stack (learning)': '🧩',
+            'Git': '🔧', 'GitHub': '🐙', 'VS Code': '🧰', 'AWS (beginner)': '☁️',
+            'Team Leadership': '👥', 'Content Writing': '✍️', 'Public Speaking': '🗣️', 'Collaboration': '🤝'
+          }
+          const allSkills = Object.values(skills).flat()
+          const Badge = ({ label }) => (
+            <span className="mx-3 my-2 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-sm whitespace-nowrap">
+              <span>{emojiMap[label] || '🔹'}</span>
+              <span>{label}</span>
+            </span>
+          )
+          const Row = () => (
+            <div className="flex items-center">
+              {allSkills.map((s, i) => <Badge key={`${s}-${i}`} label={s} />)}
+            </div>
+          )
+          return (
+            <div className="relative mt-10 overflow-hidden">
+              <motion.div
+                className="flex w-max"
+                aria-hidden="true"
+                animate={{ x: ['0%', '-55%'] }}
+                transition={{ duration: 45, repeat: Infinity, repeatType: 'loop', ease: 'linear' }}
+              >
+                <Row />
+                {/* duplicate for seamless loop */}
+                <Row />
+              </motion.div>
+            </div>
+          )
+        })()}
       </div>
     </section>
   )

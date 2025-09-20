@@ -32,7 +32,10 @@ export default function Navbar() {
   return (
     <header className="fixed top-0 inset-x-0 z-50 nav-blur">
       <nav className="container flex items-center justify-between h-16">
-        <a href="#home" className="font-heading text-lg font-bold">Sarthak<span className="text-violet-400">.</span></a>
+        <a href="#home" className="font-heading text-lg font-bold flex items-center gap-2" aria-label="Home">
+          <img src="/pofile.png" alt="Sarthak profile logo" className="h-8 w-8 rounded-full object-cover" loading="eager" />
+          <span className="hidden sm:inline">Sarthak<span className="text-violet-400">.</span></span>
+        </a>
         <div className="hidden md:flex items-center gap-6">
           {links.map(l => {
             const isActive = active === l.href

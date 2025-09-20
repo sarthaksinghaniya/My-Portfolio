@@ -83,7 +83,14 @@ export default function Hero() {
           >
             <a href="#projects" className="btn btn-primary">📂 Explore Projects</a>
             <a href="#contact" className="btn btn-ghost">✉️ Contact Me</a>
-            <a href="/resume.pdf" className="btn btn-ghost">📄 View Resume</a>
+            <a
+              href="/Resume%20ss.pdf"
+              download="Sarthak_Singhaniya_Resume.pdf"
+              className="btn btn-ghost"
+              aria-label="Download Resume PDF"
+            >
+              📄 Resume 
+            </a>
           </motion.div>
         </motion.div>
         <div className="relative">
