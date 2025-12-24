@@ -3,17 +3,52 @@ import { profile } from '../data/content'
 
 export default function Contact() {
   const [toast, setToast] = useState(null)
-  const onSubmit = (e) => {
+  const [isSubmitting, setIsSubmitting] = useState(false)
+
+  const openGmail = (e) => {
     e.preventDefault()
-    const form = e.currentTarget
-    const name = form.name.value.trim()
-    const email = form.email.value.trim()
-    const message = form.message.value.trim()
-    const subject = encodeURIComponent(`Portfolio contact from ${name}`)
-    const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`)
-    window.location.href = `mailto:${profile.email}?subject=${subject}&body=${body}`
-    setToast('Opening email client… If nothing happens, try WhatsApp or copy the email.')
-    setTimeout(() => setToast(null), 3500)
+    setIsSubmitting(true)
+    
+    try {
+      const form = e.currentTarget
+      const name = form.name.value.trim()
+      const email = form.email.value.trim()
+      const message = form.message.value.trim()
+      
+      if (!name || !email || !message) {
+        setToast('Please fill in all fields')
+        setTimeout(() => setToast(null), 3000)
+        return
+      }
+      
+      // Format the email components
+      const subject = `Portfolio contact from ${name}`
+      const body = `Name: ${name}\nEmail: ${email}\n\n${message}`
+      
+      // Try to open Gmail compose window directly
+      const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(profile.email)}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
+      
+      // Open Gmail in a new tab
+      const newWindow = window.open(gmailUrl, '_blank')
+      
+      // Fallback to mailto: if window.open is blocked
+      if (!newWindow || newWindow.closed || typeof newWindow.closed === 'undefined') {
+        window.location.href = `mailto:${profile.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
+        setToast('Opening email client... If nothing happens, try copying the email address.')
+      } else {
+        setToast('Opening Gmail...')
+      }
+      
+      // Clear the form if email client opened successfully
+      form.reset()
+      
+    } catch (error) {
+      console.error('Error opening email client:', error)
+      setToast('Error opening email. Please try again or use WhatsApp.')
+    } finally {
+      setIsSubmitting(false)
+      setTimeout(() => setToast(null), 3500)
+    }
   }
 
   const toWhatsApp = (e) => {
@@ -45,7 +80,7 @@ export default function Contact() {
             </div>
           </div>
         </div>
-        <form className="glass p-6 grid gap-4" onSubmit={onSubmit}>
+        <form className="glass p-6 grid gap-4" onSubmit={openGmail}>
           <label className="sr-only" htmlFor="name">Your Name</label>
           <input id="name" name="name" required placeholder="Your Name" className="px-4 py-3 rounded-lg bg-white/5 border border-white/10 outline-none focus:ring-2 focus:ring-violet-500" />
           <label className="sr-only" htmlFor="email">Your Email</label>
@@ -53,7 +88,13 @@ export default function Contact() {
           <label className="sr-only" htmlFor="message">Message</label>
           <textarea id="message" name="message" required placeholder="Message" rows="5" className="px-4 py-3 rounded-lg bg-white/5 border border-white/10 outline-none focus:ring-2 focus:ring-violet-500"></textarea>
           <div className="flex flex-wrap gap-3">
-            <button type="submit" className="btn btn-primary">Send Email</button>
+            <button 
+              type="submit" 
+              className={`btn btn-primary ${isSubmitting ? 'opacity-70 cursor-not-allowed' : ''}`}
+              disabled={isSubmitting}
+            >
+              {isSubmitting ? 'Opening...' : 'Send Email'}
+            </button>
             <button type="button" onClick={toWhatsApp} className="btn btn-ghost">Send via WhatsApp</button>
           </div>
         </form>
