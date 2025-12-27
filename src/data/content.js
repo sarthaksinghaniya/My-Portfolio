@@ -82,7 +82,7 @@ export const projects = [
     title: 'ReviveLab',
     description: 'An innovative AI-powered platform that revolutionizes e-waste management through computer vision and machine learning. The system automatically identifies and classifies electronic components, provides repair guides, and suggests upcycling opportunities, significantly reducing e-waste.',
     tech: ['Python', 'TensorFlow', 'OpenCV', 'Flask', 'React', 'MongoDB', 'Docker'],
-    link: 'https://reviber.netlify.app',
+    link: 'https://revibe-lab.netlify.app',
     highlights: [
       'Developed a custom YOLOv8 model achieving 94.5% accuracy in component recognition',
       'Implemented a knowledge graph to suggest repair and upcycling options',
@@ -115,6 +115,19 @@ export const projects = [
       'Created a predictive model for room allocation with 98% accuracy',
       'Reduced timetable generation time from 8 hours to under 5 minutes',
       'Currently used by 3 universities with plans for national expansion'
+    ]
+  },
+  {
+    title: 'Path Sarthi',
+    description: 'An innovative AI-powered platform that predicts and suggests analytical career paths for students based on their skills, interests, and market trends. The system leverages machine learning algorithms to provide personalized recommendations and resources for skill development.',
+    tech: ['Python', 'next.js', 'OpenCV', 'React', 'MongoDB', 'Docker'],
+    link: 'https://path-sarthi--sarthakshubh.replit.app',
+    highlights: [
+      'Developed a custom YOLOv8 model achieving 94.5% accuracy predicting career paths',
+      'Implemented a knowledge graph to suggest skill development options',
+      'Integrated with Unstp and linkedin for real-time component analysis',
+      'Tried Replit deployment for hosting the project and automate the workflow',
+      'Featured in 2 tech publications for innovation in career guidance'
     ]
   },
   {
