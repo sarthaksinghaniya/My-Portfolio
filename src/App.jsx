@@ -8,6 +8,7 @@ import Projects from './components/Projects'
 import Experience from './components/Experience'
 import Certifications from './components/Certifications'
 import Achievements from './components/Achievements'
+import CodingProfiles from './components/CodingProfiles'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import SectionReveal from './components/SectionReveal'
@@ -29,7 +30,8 @@ export default function App(){
           <SectionReveal delay={0.14}><Experience /></SectionReveal>
           <SectionReveal delay={0.16}><Certifications /></SectionReveal>
           <SectionReveal delay={0.18}><Achievements /></SectionReveal>
-          <SectionReveal delay={0.20}><Contact /></SectionReveal>
+          <SectionReveal delay={0.20}><CodingProfiles /></SectionReveal>
+          <SectionReveal delay={0.22}><Contact /></SectionReveal>
         </main>
         <Footer />
         <ChatWidget />

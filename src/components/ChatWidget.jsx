@@ -39,39 +39,49 @@ export default function ChatWidget() {
     if (!msg) return
     setMessages(prev => [...prev, { role: 'user', text: msg }])
     setInput('')
-    // Scripted response
+    // Enhanced Scripted response
     const lower = msg.toLowerCase()
-    let reply = "I can help with Projects, Stack, Experience, Certifications, or Achievements."
+    let reply = "I can help with Projects, Skills, Experience, Certifications, Achievements, Coding Profiles, or provide any of Sarthak's links."
+    
     if (/(project|work|build)/.test(lower)) {
-      const top = (kb.projects || []).slice(0, 2).map(p => `• ${p.title} — ${p.summary}`).join('\n') || 'No projects listed yet.'
-      reply = `${top}\nWant to jump to Projects?`
+      const top = (kb.projects || []).slice(0, 3).map(p => `• ${p.title} — ${p.summary?.split('.')[0] || ''}`).join('\n') || 'No projects listed yet.'
+      reply = `${top}\n\nWant to jump to Projects section?`
     } else if (/(stack|tech|tools|skills)/.test(lower)) {
-      const stack = (kb.stack?.primary || []).slice(0,6).join(', ')
-      const tools = (kb.stack?.tools || []).slice(0,4).join(', ')
-      reply = `Primary stack: ${stack}.\nTools: ${tools}.\nWant to jump to Skills?`
+      const aiMl = (kb.skills?.technical?.ai_ml || []).slice(0,4).join(', ')
+      const fullstack = (kb.skills?.technical?.fullstack || []).slice(0,4).join(', ')
+      reply = `🤖 AI/ML: ${aiMl}\n💻 Full-Stack: ${fullstack}\n\nWant to see all Skills?`
     } else if (/(experience|intern|work exp|job)/.test(lower)) {
       const exp = (kb.experience || [])[0]
-      reply = exp ? `${exp.role} (${exp.period}). Key impact: ${exp.impact?.join('; ')}` : 'Experience details coming soon.'
+      reply = exp ? `🚀 ${exp.role} at ${exp.company} (${exp.period})\n\nKey responsibilities: ${exp.responsibilities?.slice(0,2).join('; ') || ''}` : 'Experience details coming soon.'
     } else if (/(cert|certificate|award)/.test(lower)) {
-      const certs = (kb.certifications || []).slice(0,2).join('; ')
-      reply = certs ? `Top certifications/awards: ${certs}.` : 'Certifications coming soon.'
+      const certs = (kb.certifications || []).slice(0,3).join('; ')
+      reply = certs ? `🏆 Top certifications: ${certs}.` : 'Certifications coming soon.'
     } else if (/(achieve|milestone|honor|prize)/.test(lower)) {
       const ach = (kb.achievements || []).slice(0,2).join('; ')
-      reply = ach ? `Highlights: ${ach}.` : 'Achievements coming soon.'
+      reply = ach ? `⭐ Highlights: ${ach}.` : 'Achievements coming soon.'
+    } else if (/(coding|leetcode|kaggle|unstop)/.test(lower)) {
+      reply = `🔗 Sarthak's Coding Profiles:\n• LeetCode: ${kb.contact?.social?.leetcode || 'N/A'}\n• Kaggle: ${kb.contact?.social?.kaggle || 'N/A'}\n• Unstop: ${kb.contact?.social?.unstop || 'N/A'}\n\nWant to visit the Coding Profiles section?`
     } else if (/(resume|cv)/.test(lower)) {
-      const url = kb.links?.resume || '#'
-      reply = url && url !== '#' ? `Opening resume… ${url}` : 'Resume link not set. You can add it to kb.links.resume.'
+      const url = kb.contact?.resume || '#'
+      reply = url && url !== '#' ? `📄 Opening Sarthak's resume... ${url}` : 'Resume link not available.'
       if (url && url !== '#') setTimeout(() => window.open(url, '_blank', 'noopener'), 50)
     } else if (/(github)/.test(lower)) {
-      const url = kb.links?.github || '#'
-      reply = url && url !== '#' ? `Here is the GitHub: ${url}` : 'GitHub link not set.'
+      const url = kb.contact?.social?.github || '#'
+      reply = url && url !== '#' ? `💻 GitHub: ${url}` : 'GitHub link not available.'
       if (url && url !== '#') setTimeout(() => window.open(url, '_blank', 'noopener'), 50)
     } else if (/(linkedin)/.test(lower)) {
-      const url = kb.links?.linkedin || '#'
-      reply = url && url !== '#' ? `Here is the LinkedIn: ${url}` : 'LinkedIn link not set.'
+      const url = kb.contact?.social?.linkedin || '#'
+      reply = url && url !== '#' ? `💼 LinkedIn: ${url}` : 'LinkedIn link not available.'
       if (url && url !== '#') setTimeout(() => window.open(url, '_blank', 'noopener'), 50)
+    } else if (/(contact|email|phone)/.test(lower)) {
+      reply = `📧 Email: ${kb.contact?.email || 'N/A'}\n📱 Phone: ${kb.contact?.phone || 'N/A'}\n\nWant to go to Contact section?`
+    } else if (/(links|social|profile)/.test(lower)) {
+      const links = kb.utils?.getAllLinks?.() || {}
+      reply = `🔗 Sarthak's Links:\n• LinkedIn: ${links.linkedin}\n• GitHub: ${links.github}\n• Portfolio: ${links.portfolio}\n• LeetCode: ${links.leetcode}\n• Kaggle: ${links.kaggle}\n• Unstop: ${links.unstop}\n• Email: ${links.email}`
+    } else if (/(about|bio|who)/.test(lower)) {
+      reply = `${kb.profile?.bio || 'Sarthak is a passionate AI/ML Engineer and Full-Stack Developer with expertise in building innovative solutions.'}\n\n🎓 Currently pursuing B.Tech in CSE (AI) at BBD University\n🚀 Founder & AI/ML Engineer at TechNeekX\n💡 2+ years of experience in AI/ML and web development`
     } else if (/(hi|hello|hey)/.test(lower)) {
-      reply = 'Hello! Ask me about projects, stack, or achievements — or use the quick chips below.'
+      reply = '👋 Hello! I\'m Sarthak\'s AI Twin! I can help you with:\n\n• Projects & Portfolio\n• Skills & Expertise\n• Experience & Background\n• Certifications & Achievements\n• Coding Profiles (LeetCode, Kaggle, Unstop)\n• Contact Information & Links\n\nFeel free to ask anything or use the quick chips below!'
     }
     setTimeout(() => setMessages(prev => [...prev, { role: 'bot', text: reply }]), 250)
   }
@@ -80,13 +90,19 @@ export default function ChatWidget() {
     { label: 'Projects', onClick: () => { send('Show me projects'); setTimeout(() => {
       document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
     }, 400) } },
-    { label: 'Stack', onClick: () => { send('What is the stack?'); setTimeout(() => {
+    { label: 'Skills', onClick: () => { send('What are the skills?'); setTimeout(() => {
       document.getElementById('skills')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
     }, 400) } },
-    { label: 'Achievements', onClick: () => { send('Show achievements'); setTimeout(() => {
-      document.getElementById('achievements')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    { label: 'Experience', onClick: () => { send('Tell me about experience'); setTimeout(() => {
+      document.getElementById('experience')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
     }, 400) } },
-    { label: 'Resume', onClick: () => { send('resume'); if (kb.links?.resume) setTimeout(()=> window.open(kb.links.resume, '_blank','noopener'), 300) } },
+    { label: 'Coding Profiles', onClick: () => { send('Show coding profiles'); setTimeout(() => {
+      document.getElementById('coding-profiles')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }, 400) } },
+    { label: 'Resume', onClick: () => { send('resume'); if (kb.contact?.resume) setTimeout(()=> window.open(kb.contact.resume, '_blank','noopener'), 300) } },
+    { label: 'Contact', onClick: () => { send('contact info'); setTimeout(() => {
+      document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }, 400) } },
   ]
 
   const panel = (

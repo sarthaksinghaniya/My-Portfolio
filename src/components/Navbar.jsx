@@ -64,7 +64,7 @@ export default function Navbar() {
             </svg>
           </a>
           <button aria-label="Toggle theme" onClick={toggle} className="btn btn-ghost">
-            {theme === 'dark' ? '🌙' : '☀️'}
+            {theme === 'dark' ? '🌙' : '🌟'}
           </button>
         </div>
         <div className="md:hidden">

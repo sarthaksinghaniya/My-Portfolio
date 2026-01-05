@@ -20,10 +20,11 @@ export const kb = {
     social: {
       github: profile.links?.github || '',
       linkedin: profile.links?.linkedin || '',
-      twitter: profile.links?.twitter || '',
-      devto: profile.links?.devto || '',
       portfolio: profile.links?.portfolio || '',
-      medium: profile.links?.medium || '',
+      instagram: profile.links?.instagram || '',
+      leetcode: profile.links?.leetcode || '',
+      unstop: profile.links?.unstop || '',
+      kaggle: profile.links?.kaggle || '',
     },
     resume: profile.links?.resume || '',
   },
@@ -31,11 +32,12 @@ export const kb = {
   // Advanced Skills Categorization
   skills: {
     technical: {
-      languages: skills['Programming & Frameworks'] || [],
-      web: skills['Web Development'] || [],
       ai_ml: skills['AI/ML & Data Science'] || [],
-      databases: skills['Databases'] || [],
-      devops: skills['DevOps & Cloud'] || [],
+      fullstack: skills['Full-Stack Development'] || [],
+      frameworks: skills['AI/ML Frameworks & Tools'] || [],
+      cloud: skills['Cloud & DevOps'] || [],
+      specializations: skills['AI/ML Specializations'] || [],
+      business: skills['Business & Leadership'] || [],
     },
     tools: {
       development: skills['Tools & Platforms'] || [],
@@ -48,8 +50,8 @@ export const kb = {
       problemSolving: ['Algorithm Design', 'System Architecture', 'Debugging'],
     },
     proficiency: (() => {
-      const expert = [...(skills['Programming & Frameworks'] || []), ...(skills['AI/ML & Data Science'] || [])].slice(0, 5);
-      const advanced = [...(skills['Web Development'] || []), ...(skills['Databases'] || [])].slice(0, 5);
+      const expert = [...(skills['AI/ML & Data Science'] || []), ...(skills['Full-Stack Development'] || [])].slice(0, 8);
+      const advanced = [...(skills['AI/ML Frameworks & Tools'] || []), ...(skills['Cloud & DevOps'] || [])].slice(0, 6);
       return { expert, advanced };
     })(),
   },
@@ -60,14 +62,14 @@ export const kb = {
     summary: p.description,
     stack: p.tech,
     link: p.link,
-    role: p.role || 'Developer',
-    period: p.period || '',
-    impact: p.impact || [],
-    metrics: p.metrics || [],
-    challenges: p.challenges || [],
-    repository: p.repository || '',
-    demo: p.demo || '',
-    isFeatured: p.isFeatured || false,
+    role: 'Lead Developer',
+    period: '',
+    impact: p.highlights || [],
+    metrics: [],
+    challenges: [],
+    repository: p.link || '',
+    demo: p.link || '',
+    isFeatured: ['ReviveLab', 'HANU-Youth Platform', 'Hospital Pulse AI'].includes(p.title),
   })).sort((a, b) => (b.isFeatured ? 1 : 0) - (a.isFeatured ? 1 : 0)),
 
   // Detailed Professional Experience
@@ -135,13 +137,17 @@ export const kb = {
       { name: 'Skills', href: '#skills' },
       { name: 'Projects', href: '#projects' },
       { name: 'Experience', href: '#experience' },
-      { name: 'Achievements', href: '#achievements' },
       { name: 'Certifications', href: '#certifications' },
+      { name: 'Achievements', href: '#achievements' },
+      { name: 'Coding Profiles', href: '#coding-profiles' },
       { name: 'Contact', href: '#contact' },
     ],
     social: [
       { name: 'GitHub', href: profile.links?.github || '#', icon: 'github' },
       { name: 'LinkedIn', href: profile.links?.linkedin || '#', icon: 'linkedin' },
+      { name: 'LeetCode', href: profile.links?.leetcode || '#', icon: 'code' },
+      { name: 'Kaggle', href: profile.links?.kaggle || '#', icon: 'chart' },
+      { name: 'Unstop', href: profile.links?.unstop || '#', icon: 'trophy' },
       { name: 'Email', href: `mailto:${profile.email}`, icon: 'email' },
     ],
   },
@@ -165,23 +171,18 @@ export const kb = {
   // Helper Methods
   utils: {
     getPrimarySkills: () => [...new Set([
-      ...(skills['Programming & Frameworks'] || []),
       ...(skills['AI/ML & Data Science'] || []),
-    ])].slice(0, 10),
+      ...(skills['Full-Stack Development'] || []),
+    ])].slice(0, 12),
     
     getExperienceYears: () => {
-      if (!experience?.length) return 0;
-      const sortedExp = [...experience].sort((a, b) => 
-        new Date(b.startDate || 0) - new Date(a.startDate || 0)
-      );
-      const earliestDate = sortedExp[sortedExp.length - 1]?.startDate;
-      if (!earliestDate) return 0;
-      return new Date().getFullYear() - new Date(earliestDate).getFullYear();
+      if (!experience?.length) return '2+ years';
+      return '2+ years of experience';
     },
     
     getTopProjects: (count = 3) => 
       [...(projects || [])]
-        .filter(p => p.isFeatured)
+        .filter(p => ['ReviveLab', 'HANU-Youth Platform', 'Hospital Pulse AI'].includes(p.title))
         .slice(0, count)
         .map(p => ({
           title: p.title,
@@ -189,5 +190,18 @@ export const kb = {
           technologies: p.tech || [],
           link: p.link,
         })),
+    
+    getAllLinks: () => ({
+      linkedin: profile.links?.linkedin || '',
+      github: profile.links?.github || '',
+      portfolio: profile.links?.portfolio || '',
+      instagram: profile.links?.instagram || '',
+      leetcode: profile.links?.leetcode || '',
+      unstop: profile.links?.unstop || '',
+      kaggle: profile.links?.kaggle || '',
+      email: profile.email || '',
+      phone: profile.phone || '',
+      resume: profile.links?.resume || '',
+    }),
   },
 };

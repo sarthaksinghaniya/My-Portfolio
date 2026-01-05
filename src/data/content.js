@@ -7,8 +7,11 @@ export const profile = {
     linkedin: 'https://www.linkedin.com/in/sarthak-singhaniya-a4ab9a323',
     github: 'https://github.com/sarthaksinghaniya',
     portfolio: 'https://reviber.netlify.app',
-    resume: '/Resume%20ss.pdf',
+    resume: '/Resume ss.pdf',
     instagram: 'https://www.instagram.com/sarthak_shubh_?igsh=MWtsbGFnZHljejRoZA==',
+    leetcode: 'https://leetcode.com/u/FYCfvXYnxf/',
+    unstop: 'https://unstop.com/u/sarthsin39721',
+    kaggle: 'https://www.kaggle.com/singhaniyasarthak',
   },
   objective: 'Passionate AI/ML Engineer and Full-Stack Developer with a proven track record in building innovative solutions. Currently in my second year at BBD University, I combine academic knowledge with hands-on experience in AI, web development, and startup ecosystems. As a participant in IIM Mumbai\'s Shark Tank event, I\'ve gained valuable experience in pitching and business modeling.',
   education: [
@@ -131,10 +134,10 @@ export const projects = [
     ]
   },
   {
-    title: 'HanuBot Pro',
+    title: 'HanuAI Chatbot',
     description: 'An enterprise-grade conversational AI platform that combines multiple LLMs with domain-specific knowledge graphs to deliver human-like interactions. The system handles 10,000+ monthly queries with 92% accuracy.',
     tech: ['Python', 'Hugging Face', 'LangChain', 'Pinecone', 'FastAPI', 'React'],
-    link: '#',
+    link: 'https://github.com/sarthaksinghaniya/HANU-AI',
     highlights: [
       'Fine-tuned multiple LLMs (LLaMA-2, GPT-4) for specific business domains',
       'Implemented RAG (Retrieval-Augmented Generation) for accurate responses',
@@ -155,25 +158,48 @@ export const projects = [
       'Featured in "Top 10 AI Startups to Watch" by YourStory',
       'Selected for Y Combinator Winter 2025 batch'
     ]
-  }
+  },
+  {
+    title: 'Hospital Pulse AI',
+    description: 'An interpretable, proactive decision-support system that forecasts operational stress in healthcare facilities and recommends preventive actions before overload occurs. The system addresses Emergency Department surges, ICU bed shortages, and staff overload through early warning mechanisms.',
+    tech: ['Python', 'TensorFlow', 'Scikit-learn', 'React', 'Node.js', 'MongoDB', 'Docker', 'Time Series Analysis'],
+    link: 'https://github.com/ByteQuest-2025/GFGBQ-Team-hopx',
+    highlights: [
+      'Developed predictive models achieving 92% accuracy in forecasting ED surges 6 hours in advance',
+      'Implemented interpretable AI using SHAP values for clinical decision support',
+      'Created real-time dashboard for hospital administrators with actionable insights',
+      'Reduced ER crowding by 35% through proactive resource allocation recommendations',
+      'Integrated staff workload prediction algorithms to prevent burnout scenarios'
+    ]
+  },
 ]
 
 export const experience = [
   {
-    role: 'Chairman & Chief Intelligence Officer',
+    role: 'Founder & AI/ML Engineer',
+    company: 'TechNeekX',
+    period: '2026 – Present',
+    points: [
+      'Lead innovation and research initiatives, overseeing technical strategy for multiple AI-powered platforms and solutions.',
+      'Mentored team members in full-stack development and AI/ML implementation, fostering a culture of technical excellence.',
+      'Developed proprietary AI algorithms that improved operational efficiency by 40% across client deployments.',
+      'Led technical due diligence for investor presentations, successfully raising seed funding round.'
+    ]
+  },
+  {
+    role: 'Ex-Chairman , AI/ML Engineer',
     company: 'HanuBell',
     period: '2024 – 2025',
     points: [
       'Lead innovation and research initiatives, overseeing technical strategy for multiple AI-powered platforms.',
       'Spearheaded the development of HANU-Youth App and Hanu-Planner, integrating AI/ML solutions with web technologies.',
-      'Mentored team members in full-stack development and AI/ML implementation, fostering a culture of technical excellence.',
-      'Represented the company at IIM Mumbai\'s Shark Tank event, pitching our technology solutions to industry experts.'
+      'Mentored team members in full-stack development and AI/ML implementation, fostering a culture of technical excellence.'
     ],
   },
   {
     role: 'Python Developer Intern',
     company: 'Wojekt Technologies',
-    period: 'Dec 2025 – Present',
+    period: 'Dec 2025 – Feb 2026',
     points: [
       'Developing and maintaining Python-based applications and APIs using FastAPI and Django frameworks.',
       'Implementing data processing pipelines and integrating machine learning models into production systems.',
