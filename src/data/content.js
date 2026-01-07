@@ -82,6 +82,19 @@ export const skills = {
 
 export const projects = [
   {
+    title: 'Team TechNeekX Portfolio',
+    description: 'A professional team portfolio website showcasing TechNeekX\'s collective expertise, projects, and team capabilities. Built as a centralized hub for client engagement and team collaboration, featuring modern design and seamless user experience.',
+    tech: ['React', 'Next.js', 'Tailwind CSS', 'Framer Motion', 'Netlify', 'Responsive Design'],
+    link: 'https://teamtechneekx.netlify.app',
+    highlights: [
+      'Founded and led the entire project from concept to deployment',
+      'Designed and implemented AI/ML solutions for team showcase',
+      'Created responsive, accessible interface with modern animations',
+      'Established scalable architecture for team collaboration features',
+      'Integrated real-time communication and project management tools'
+    ]
+  },
+  {
     title: 'ReviveLab',
     description: 'An innovative AI-powered platform that revolutionizes e-waste management through computer vision and machine learning. The system automatically identifies and classifies electronic components, provides repair guides, and suggests upcycling opportunities, significantly reducing e-waste.',
     tech: ['Python', 'TensorFlow', 'OpenCV', 'Flask', 'React', 'MongoDB', 'Docker'],
