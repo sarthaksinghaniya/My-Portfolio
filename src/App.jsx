@@ -5,9 +5,11 @@ import Hero from './components/Hero'
 import About from './components/About'
 import Skills from './components/Skills'
 import Projects from './components/Projects'
+import GitHubRepos from './components/GitHubRepos'
 import Experience from './components/Experience'
 import Certifications from './components/Certifications'
 import Achievements from './components/Achievements'
+import ProgressInsights from './components/ProgressInsights'
 import CodingProfiles from './components/CodingProfiles'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
@@ -27,11 +29,13 @@ export default function App(){
           <SectionReveal delay={0.05}><About /></SectionReveal>
           <SectionReveal delay={0.10}><Skills /></SectionReveal>
           <SectionReveal delay={0.12}><Projects /></SectionReveal>
-          <SectionReveal delay={0.14}><Experience /></SectionReveal>
-          <SectionReveal delay={0.16}><Certifications /></SectionReveal>
-          <SectionReveal delay={0.18}><Achievements /></SectionReveal>
-          <SectionReveal delay={0.20}><CodingProfiles /></SectionReveal>
-          <SectionReveal delay={0.22}><Contact /></SectionReveal>
+          <SectionReveal delay={0.14}><GitHubRepos /></SectionReveal>
+          <SectionReveal delay={0.16}><Experience /></SectionReveal>
+          <SectionReveal delay={0.18}><Certifications /></SectionReveal>
+          <SectionReveal delay={0.20}><Achievements /></SectionReveal>
+          <SectionReveal delay={0.22}><ProgressInsights /></SectionReveal>
+          <SectionReveal delay={0.24}><CodingProfiles /></SectionReveal>
+          <SectionReveal delay={0.26}><Contact /></SectionReveal>
         </main>
         <Footer />
         <ChatWidget />

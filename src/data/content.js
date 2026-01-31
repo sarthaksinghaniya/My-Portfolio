@@ -257,28 +257,47 @@ export const certifications = [
 export const achievements = [
   'IIM Mumbai – Shark Tank Event Participant: Pitched startup ideas in a competitive environment, receiving valuable feedback from industry experts.',
   'Top 2 National Finalist: Secured 2nd place at DAIICT Repo Robot Hackathon among 100+ teams.',
+  'Final Round Qualifier: Reached the final round of IDEAthon at LMNIT Jaipur, competing among top innovators.',
+  'Kaggle Excellence: Earned multiple certificates and badges in data science competitions and machine learning challenges.',
+  'LeetCode Achievement: Unlocked problem-solving badges and maintained consistent daily streak with 350+ problems solved.',
+  'IIT Madras AI Hackathon: Qualified for the final round in the prestigious Visa 24 AI Hackathon at IIT Madras.',
+  'Google Gemini AI Crew: Participated in the exclusive AI Crew Google Gemini event, exploring cutting-edge AI technologies.',
+  'IIT Kharagpur Data Science: Competed in the Data Science Hackathon at IIT Kharagpur, showcasing advanced analytics skills.',
+  'HackX Finalist: Reached the final round in HackX Hackathon, demonstrating innovation and technical excellence.',
+  'Unstop Top Performer: Achieved high rankings and consistent performance across multiple competitions on Unstop platform.',
+  'Professional Experience: Completed three internships, gaining practical industry experience in AI/ML and software development.',
+  'GIM Goa Healthcare: Reached semifinals in the Abhivridhi healthcare event at GIM Goa, focusing on healthcare innovation.',
+  'IIM Lucknow ValQuest: Participated in the ValQuest event at IIM Lucknow, competing in business strategy challenges.',
+  'IIT Patna E-Summit: Finalist in the E-Summit entrepreneurship event at IIT Patna, presenting startup ideas.',
+  'ByteQuest Coding Challenge: Reached finals in the intense 24-hour ByteQuest coding competition.',
+  'IIT Jodhpur Prompt Engineering: Participated in the prompt engineering hackathon at IIT Jodhpur, exploring AI prompt optimization.',
+  'LMNIT Jaipur Shark Tank: Finalist in the Shark Tank startup round at LMNIT Jaipur, securing recognition for innovative business ideas.',
   'International Hackathon Participant: Competed in UNESCO Youth Hackathon, collaborating with global participants on innovative solutions.',
   'NIT Silchar Hackathon: Qualified for Round 2 in competitive national-level hackathon.',
-  'Participated in 12+ national and 1 international hackathon in 2025. ',
+  'Participated in 25+ national and international hackathons in 2025-2026. ',
   'Aptitude & Quiz Champion: Strong performance in ICAT and Tata TruBall Campus Quiz competitions.',
   'Technical Content Creator: Published articles and tutorials on AI/ML and web development topics.'
 ];
 
 export const hackathons = [
   'DAIICT Repo Robot Hackathon – 2nd Place (National Level)',
+  'IDEAthon LMNIT Jaipur – Final Round Qualifier',
+  'Visa 24 AI Hackathon IIT Madras – Finalist',
+  'HackX Hackathon – Final Round Qualifier',
+  'ByteQuest 24-Hour Coding Challenge – Finalist',
+  'IIT Jodhpur Prompt Engineering Hackathon – Participant',
+  'LMNIT Jaipur Shark Tank – Finalist',
   'NIT Silchar Hackathon – Round 2 Qualifier',
   'UNSO Youth Hackathon – International Participant',
   'IIM Mumbai Shark Tank – Participant',
-  '3+ National Hackathons – Active Participant'
+  '25+ National & International Hackathons – Active Participant (2025-2026)'
 ];
 
 export const leadership = [
-  'Technical Lead at HanuBell, mentoring a team of 8 developers in AI/ML and full-stack development',
+  'Founder | Mentor at TechNeekX, mentoring a team of 25+ developers in AI/ML and full-stack development',
   'Organized 15+ technical workshops and hackathons with 500+ combined participants',
-  'Keynote speaker at 3 national tech conferences on AI and innovation',
-  'Mentor at Google Developer Student Clubs, guiding 20+ students in AI projects',
+  'Mentor at IBM Student Clubs at BBDU, guiding 20+ students in AI projects',
   'Core team member of BBDU Tech Community, responsible for AI/ML curriculum development',
-  'Represented university at 5+ national-level technical competitions',
-  'Published 3 research papers in AI/ML at international conferences',
-  'Active contributor to 5+ open-source AI projects with 500+ GitHub stars'
+  'Represented university at 15+ national-level technical competitions',
+  'Member of AI/ML and Data Science Society, contributing to open-source projects and events'
 ];

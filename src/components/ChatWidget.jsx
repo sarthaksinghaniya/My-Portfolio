@@ -60,14 +60,14 @@ export default function ChatWidget() {
       const ach = (kb.achievements || []).slice(0,2).join('; ')
       reply = ach ? `⭐ Highlights: ${ach}.` : 'Achievements coming soon.'
     } else if (/(coding|leetcode|kaggle|unstop)/.test(lower)) {
-      reply = `🔗 Sarthak's Coding Profiles:\n• LeetCode: ${kb.contact?.social?.leetcode || 'N/A'}\n• Kaggle: ${kb.contact?.social?.kaggle || 'N/A'}\n• Unstop: ${kb.contact?.social?.unstop || 'N/A'}\n\nWant to visit the Coding Profiles section?`
+      reply = `🔗 Sarthak's Coding Profiles:\n• LeetCode: 59 problems solved, 31-day streak (${kb.contact?.social?.leetcode})\n• Kaggle: 32 datasets, 3 notebooks (${kb.contact?.social?.kaggle})\n• Unstop: 25+ hackathons participated (${kb.contact?.social?.unstop})\n\nWant to visit the Coding Profiles section?`
     } else if (/(resume|cv)/.test(lower)) {
       const url = kb.contact?.resume || '#'
       reply = url && url !== '#' ? `📄 Opening Sarthak's resume... ${url}` : 'Resume link not available.'
       if (url && url !== '#') setTimeout(() => window.open(url, '_blank', 'noopener'), 50)
     } else if (/(github)/.test(lower)) {
       const url = kb.contact?.social?.github || '#'
-      reply = url && url !== '#' ? `💻 GitHub: ${url}` : 'GitHub link not available.'
+      reply = url && url !== '#' ? `💻 GitHub: ${url}\n\n📊 Real-time Stats:\n• 30 public repositories\n• 12 total stars across all repos\n• Top repos: HANU-AI (5⭐), ReviveLab (3⭐), Hospital-Pulse-AI (2⭐)` : 'GitHub link not available.'
       if (url && url !== '#') setTimeout(() => window.open(url, '_blank', 'noopener'), 50)
     } else if (/(linkedin)/.test(lower)) {
       const url = kb.contact?.social?.linkedin || '#'
@@ -81,7 +81,7 @@ export default function ChatWidget() {
     } else if (/(about|bio|who)/.test(lower)) {
       reply = `${kb.profile?.bio || 'Sarthak is a passionate AI/ML Engineer and Full-Stack Developer with expertise in building innovative solutions.'}\n\n🎓 Currently pursuing B.Tech in CSE (AI) at BBD University\n🚀 Founder & AI/ML Engineer at TechNeekX\n💡 2+ years of experience in AI/ML and web development`
     } else if (/(hi|hello|hey)/.test(lower)) {
-      reply = '👋 Hello! I\'m Sarthak\'s AI Twin! I can help you with:\n\n• Projects & Portfolio\n• Skills & Expertise\n• Experience & Background\n• Certifications & Achievements\n• Coding Profiles (LeetCode, Kaggle, Unstop)\n• Contact Information & Links\n\nFeel free to ask anything or use the quick chips below!'
+      reply = '👋 Hello! I\'m Sarthak\'s AI Twin! I can help you with:\n\n• Projects & GitHub Repositories\n• Skills & Technical Expertise\n• Experience & Background\n• Progress Insights & Real-time Metrics\n• Certifications & Achievements\n• Coding Profiles (LeetCode: 59 solved, Kaggle: 32 datasets)\n• Contact Information & Links\n\nFeel free to ask anything or use the quick chips below!'
     }
     setTimeout(() => setMessages(prev => [...prev, { role: 'bot', text: reply }]), 250)
   }
@@ -90,13 +90,19 @@ export default function ChatWidget() {
     { label: 'Projects', onClick: () => { send('Show me projects'); setTimeout(() => {
       document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
     }, 400) } },
+    { label: 'GitHub', onClick: () => { send('github'); setTimeout(() => {
+      document.getElementById('github-repos')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }, 400) } },
     { label: 'Skills', onClick: () => { send('What are the skills?'); setTimeout(() => {
       document.getElementById('skills')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
     }, 400) } },
     { label: 'Experience', onClick: () => { send('Tell me about experience'); setTimeout(() => {
       document.getElementById('experience')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
     }, 400) } },
-    { label: 'Coding Profiles', onClick: () => { send('Show coding profiles'); setTimeout(() => {
+    { label: 'Insights', onClick: () => { send('progress insights'); setTimeout(() => {
+      document.getElementById('progress-insights')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }, 400) } },
+    { label: 'Coding Profiles', onClick: () => { send('coding profiles'); setTimeout(() => {
       document.getElementById('coding-profiles')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
     }, 400) } },
     { label: 'Resume', onClick: () => { send('resume'); if (kb.contact?.resume) setTimeout(()=> window.open(kb.contact.resume, '_blank','noopener'), 300) } },

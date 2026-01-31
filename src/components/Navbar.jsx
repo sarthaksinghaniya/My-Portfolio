@@ -5,8 +5,10 @@ import { profile } from '../data/content'
 const links = [
   { href: '#home', label: 'Home' },
   { href: '#projects', label: 'Projects' },
+  { href: '#github-repos', label: 'GitHub' },
   { href: '#skills', label: 'Skills' },
   { href: '#experience', label: 'Experience' },
+  { href: '#progress-insights', label: 'Insights' },
   { href: '#contact', label: 'Contact' },
 ]
 

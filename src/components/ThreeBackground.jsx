@@ -89,9 +89,11 @@ export default function ThreeBackground(){
         <fog attach="fog" args={["#0b1220", 4, 12]} />
         <ambientLight intensity={0.35} />
         {/* Near layer */}
-        <Particles scrollOpacity={opacity} baseSpeed={speed} color="#7c3aed" size={0.01} spread={10} reduced={reduced} count={2200} />
+        <Particles scrollOpacity={opacity} baseSpeed={speed} color="#7c3aed" size={0.01} spread={10} reduced={reduced} count={4000} />
         {/* Far layer for depth */}
-        <Particles scrollOpacity={Math.max(0, opacity - 0.1)} baseSpeed={speed * 0.5} color="#22d3ee" size={0.008} spread={16} reverse reduced={reduced} count={1800} />
+        <Particles scrollOpacity={Math.max(0, opacity - 0.1)} baseSpeed={speed * 0.5} color="#22d3ee" size={0.008} spread={16} reverse reduced={reduced} count={3200} />
+        {/* Additional middle layer for more density */}
+        <Particles scrollOpacity={Math.max(0, opacity - 0.05)} baseSpeed={speed * 0.7} color="#a855f7" size={0.006} spread={12} reduced={reduced} count={2800} />
       </Canvas>
       {/* Top/bottom gradient to keep content readable */}
       <div className="absolute inset-0 pointer-events-none bg-gradient-to-b from-slate-950/0 via-slate-950/10 to-slate-950" />
