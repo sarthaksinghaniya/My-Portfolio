@@ -12,6 +12,7 @@ export const profile = {
     leetcode: 'https://leetcode.com/u/FYCfvXYnxf/',
     unstop: 'https://unstop.com/u/sarthsin39721',
     kaggle: 'https://www.kaggle.com/singhaniyasarthak',
+    googledev: 'https://g.dev/sarthaksinghaniya',
   },
   objective: 'Passionate AI/ML Engineer and Full-Stack Developer with a proven track record in building innovative solutions. Currently in my second year at BBD University, I combine academic knowledge with hands-on experience in AI, web development, and startup ecosystems. As a participant in IIM Mumbai\'s Shark Tank event, I\'ve gained valuable experience in pitching and business modeling.',
   education: [
