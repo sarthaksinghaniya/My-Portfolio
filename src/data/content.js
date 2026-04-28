@@ -9,7 +9,7 @@ export const profile = {
     linkedin: 'https://www.linkedin.com/in/sarthak-singhaniya-a4ab9a323',
     github: 'https://github.com/sarthaksinghaniya',
     portfolio: 'https://reviber.netlify.app',
-    resume: '/Resume ss.pdf',
+    resume: '/Sarthak_Resume.pdf',
     instagram: 'https://www.instagram.com/sarthak_shubh_?igsh=MWtsbGFnZHljejRoZA==',
     leetcode: 'https://leetcode.com/u/FYCfvXYnxf/',
     unstop: 'https://unstop.com/u/sarthsin39721',
@@ -36,7 +36,7 @@ export const liveProofs = [
   { label: 'IIT Mandi Winner', value: 'Winner' },
   { label: '100+ Community Members', value: '100+' },
   { label: '4+ Events Led', value: '4+' },
-  { label: 'Featured AI Projects', value: '4' }
+  { label: 'Featured AI Projects', value: '10+' }
 ]
 
 export const skills = {
