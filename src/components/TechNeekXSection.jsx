@@ -35,7 +35,7 @@ export default function TechNeekXSection() {
             <div className="mt-8 flex flex-wrap gap-3">
               <a href={profile.links.techneekx} target="_blank" rel="noreferrer" className="btn btn-primary">Visit TechNeekX</a>
               <a href={profile.links.techneekx} target="_blank" rel="noreferrer" className="btn btn-ghost">Join the Ecosystem</a>
-              <a href={profile.links.linkedin} target="_blank" rel="noreferrer" className="btn btn-ghost">Collaborate</a>
+              <a href="https://www.linkedin.com/company/techneekx/in" target="_blank" rel="noreferrer" className="btn btn-ghost">Collaborate</a>
             </div>
           </div>
           <div className="glass rounded-[28px] border border-white/10 bg-slate-950/80 p-8 shadow-glass">
