@@ -3,40 +3,47 @@ import { motion } from 'framer-motion'
 import { experience } from '../data/content'
 
 export default function Experience() {
-  const container = {
-    hidden: { opacity: 0 },
-    show: {
-      opacity: 1,
-      transition: { staggerChildren: 0.12 }
-    }
-  }
-  const item = {
-    hidden: { opacity: 0, y: 16 },
-    show: { opacity: 1, y: 0, transition: { duration: 0.4, ease: 'easeOut' } }
-  }
   return (
     <section id="experience" className="section">
       <div className="container">
-        <h2 className="h2">Experience</h2>
-        <motion.div
-          variants={container}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, amount: 0.2 }}
-          className="mt-6 grid gap-5"
-        >
-          {experience.map((e, i) => (
-            <motion.div key={i} variants={item} className="glass p-6 md:p-7">
-              <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
-                <h3 className="font-semibold">{e.role}</h3>
-                <span className="text-sm text-slate-400">{e.period}</span>
-              </div>
-              <ul className="mt-3 list-disc list-inside text-slate-300 space-y-1">
-                {e.points.map((p, idx) => <li key={idx}>{p}</li>)}
-              </ul>
-            </motion.div>
-          ))}
-        </motion.div>
+        <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+          <div>
+            <p className="text-sm uppercase tracking-[0.4em] text-slate-400">Experience</p>
+            <h2 className="h2 mt-3">Roles that combine AI engineering, product leadership, and founder execution.</h2>
+          </div>
+          <p className="max-w-xl text-slate-300">A curated timeline focused on leadership, internship impact, and community-building in AI and full-stack product delivery.</p>
+        </div>
+        <div className="mt-10 relative">
+          <div className="pointer-events-none absolute left-4 top-0 hidden h-full w-px bg-gradient-to-b from-sky-400/60 to-violet-500/60 md:block"></div>
+          <div className="space-y-8">
+            {experience.map((item, index) => (
+              <motion.div
+                key={item.role + index}
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.45, delay: index * 0.08 }}
+                className="relative md:pl-12"
+              >
+                <span className="absolute left-0 top-3 block h-4 w-4 rounded-full bg-gradient-to-br from-sky-400 to-violet-500 shadow-lg shadow-sky-500/20"></span>
+                <div className="glass border border-white/10 p-6 shadow-glass">
+                  <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+                    <div>
+                      <p className="text-sm uppercase tracking-[0.3em] text-slate-400">{item.company}</p>
+                      <h3 className="mt-2 text-2xl font-semibold text-white">{item.role}</h3>
+                    </div>
+                    <span className="rounded-full bg-slate-900/80 px-4 py-2 text-sm text-slate-300">{item.period}</span>
+                  </div>
+                  <ul className="mt-4 list-disc list-inside space-y-2 text-slate-300">
+                    {item.points.map((bullet, idx) => (
+                      <li key={idx}>{bullet}</li>
+                    ))}
+                  </ul>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   )
