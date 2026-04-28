@@ -64,7 +64,7 @@ A modern, feature-rich portfolio website with real-time data integration, intera
 portfolio-sarthak/
 ├─ public/
 │  ├─ icons/profile.jpeg
-│  ├─ Resume ss.pdf
+│  ├─ Sarthak_Resume.pdf
 │  ├─ robots.txt
 │  ├─ sitemap.xml
 │  └─ favicon.ico
