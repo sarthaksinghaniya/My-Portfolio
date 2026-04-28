@@ -4,14 +4,22 @@
 
 html { scroll-behavior: smooth; }
 
+body {
+  @apply bg-slate-950 text-slate-100 antialiased;
+  background-image:
+    radial-gradient(circle at top right, rgba(56, 189, 248, 0.14), transparent 24%),
+    radial-gradient(circle at 20% 15%, rgba(129, 140, 248, 0.12), transparent 16%),
+    linear-gradient(180deg, #020617 0%, #090c16 100%);
+}
+
 /* Glassmorphism */
 .glass {
   background: rgba(255,255,255,0.06);
-  border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 20px;
+  box-shadow: 0 4px 40px rgba(0, 0, 0, 0.16);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.10);
 }
 
 .neumorph {
@@ -21,7 +29,7 @@ html { scroll-behavior: smooth; }
 }
 
 .section {
-  @apply relative py-24 md:py-32;
+  @apply relative py-20 md:py-28;
 }
 
 .container {
@@ -83,6 +91,7 @@ html { scroll-behavior: smooth; }
               0 0 8px rgba(255, 255, 255, 0.10),
               0 0 18px rgba(200, 220, 255, 0.10);
 }
+
 .nav-blur { @apply backdrop-blur-md bg-slate-900/60 border-b border-white/10; }
 
 /* Accessibility: Respect user reduced motion preference */
