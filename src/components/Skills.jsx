@@ -11,7 +11,6 @@ export default function Skills() {
             <p className="text-sm uppercase tracking-[0.4em] text-slate-400">Core Skills</p>
             <h2 className="h2 mt-3">Technical strengths across AI, full-stack development, and product delivery.</h2>
           </div>
-          <p className="max-w-xl text-slate-300">Designed to be clear for recruiters, judges, and founders while remaining visually premium.</p>
         </div>
 
         <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
@@ -28,7 +27,9 @@ export default function Skills() {
               <div className="mt-4 space-y-3 text-slate-300">
                 {items.map((skill) => (
                   <div key={skill} className="flex items-start gap-3">
-                    <span className="mt-1 h-2.5 w-2.5 rounded-full bg-sky-400" aria-hidden="true"></span>
+                    <svg className="mt-1 h-4 w-4 flex-shrink-0 text-sky-400" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                      <path d="M20.285 6.709a1 1 0 0 0-1.414-1.418l-9.192 9.2-3.833-3.834a1 1 0 0 0-1.415 1.414l4.54 4.54a1 1 0 0 0 1.414 0l9.9-9.902z" />
+                    </svg>
                     <span>{skill}</span>
                   </div>
                 ))}
