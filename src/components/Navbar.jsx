@@ -4,11 +4,12 @@ import { profile } from '../data/content'
 
 const links = [
   { href: '#home', label: 'Home' },
-  { href: '#projects', label: 'Projects' },
-  { href: '#github-repos', label: 'GitHub' },
-  { href: '#skills', label: 'Skills' },
+  { href: '#featured-projects', label: 'Work' },
+  { href: '#techneekx', label: 'Ecosystem' },
   { href: '#experience', label: 'Experience' },
-  { href: '#progress-insights', label: 'Insights' },
+  { href: '#achievements', label: 'Achievements' },
+  { href: '#skills', label: 'Skills' },
+  { href: '#certifications', label: 'Proof' },
   { href: '#contact', label: 'Contact' },
 ]
 
