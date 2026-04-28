@@ -1,6 +1,8 @@
+export const proofLink = 'https://drive.google.com/drive/folders/1CBeJ9os9s92ZQOpbHguHTmKQ0fOCLsYK?usp=sharing'
+
 export const profile = {
   name: 'Sarthak Singhaniya',
-  tagline: 'Co-Founder & Chief Intelligence Officer at HanuBell | AI/ML Engineer | Full-Stack Developer | CSE(AI) 2026 | Hackathon Enthusiast | IIM Mumbai Shark Tank Participant',
+  tagline: 'AI/ML Engineer + Full-Stack Developer + Founder of TechNeekX — building real-world intelligent systems.',
   email: 'sarthaksinghaniya789@gmail.com',
   phone: '+91-6387860126',
   links: {
@@ -13,8 +15,9 @@ export const profile = {
     unstop: 'https://unstop.com/u/sarthsin39721',
     kaggle: 'https://www.kaggle.com/singhaniyasarthak',
     googledev: 'https://g.dev/sarthaksinghaniya',
+    techneekx: 'https://teamtechneekx.netlify.app'
   },
-  objective: 'Passionate AI/ML Engineer and Full-Stack Developer with a proven track record in building innovative solutions. Currently in my second year at BBD University, I combine academic knowledge with hands-on experience in AI, web development, and startup ecosystems. As a participant in IIM Mumbai\'s Shark Tank event, I\'ve gained valuable experience in pitching and business modeling.',
+  objective: 'Passionate AI/ML Engineer and Full-Stack Developer focused on building intelligent systems that deliver measurable impact. I combine startup execution, hackathon momentum, and community leadership through TechNeekX.',
   education: [
     {
       title: 'B.Tech in Computer Science (AI Specialization)',
@@ -22,62 +25,54 @@ export const profile = {
       period: '2024 – 2028 (Expected)',
       details: [
         'Currently in second year, third semester',
-        'Consistently pursuing advanced, industry-aligned learning beyond formal curriculum'
+        'Combining academic learning with real-world AI and product development experience.'
       ]
     }
   ],
 }
 
+export const liveProofs = [
+  { label: '50+ Hackathons', value: '50+' },
+  { label: 'IIT Mandi Winner', value: 'Winner' },
+  { label: '100+ Community Members', value: '100+' },
+  { label: '4+ Events Led', value: '4+' },
+  { label: 'Featured AI Projects', value: '4' }
+]
+
 export const skills = {
-  'AI/ML & Data Science': [
-    'Machine Learning (Supervised/Unsupervised Learning)', 
-    'Deep Learning (Neural Networks, Transformers)', 
-    'Natural Language Processing (NLTK, spaCy, Transformers)',
-    'Computer Vision (OpenCV, TensorFlow, PyTorch)',
-    'Generative AI & LLM Integration',
-    'Model Deployment & MLOps',
-    'Data Analysis & Visualization (Pandas, Matplotlib, Seaborn)'
+  'AI/ML': [
+    'Python',
+    'PyTorch',
+    'TensorFlow',
+    'Scikit-learn',
+    'NLP',
+    'Computer Vision',
+    'YOLO',
+    'LSTM'
   ],
-  'Full-Stack Development': [
-    'Python (Flask, FastAPI, Django)', 
-    'JavaScript (ES6+) & TypeScript', 
-    'React.js & Next.js', 
-    'Node.js & Express.js',
-    'RESTful & GraphQL APIs',
-    'Microservices Architecture',
-    'Progressive Web Apps (PWA)'
+  'Full Stack': [
+    'React.js',
+    'Next.js',
+    'Node.js',
+    'Flask',
+    'Django',
+    'FastAPI',
+    'REST APIs'
   ],
-  'AI/ML Frameworks & Tools': [
-    'TensorFlow & Keras',
-    'PyTorch & Transformers',
-    'Hugging Face Ecosystem',
-    'LangChain & LlamaIndex',
-    'MLflow & Weights & Biases',
-    'Docker & Kubernetes for ML'
+  'Data & Tools': [
+    'NumPy',
+    'Pandas',
+    'Matplotlib',
+    'Streamlit',
+    'Git',
+    'GitHub',
+    'Docker'
   ],
-  'Cloud & DevOps': [
-    'AWS (SageMaker, Lambda, EC2, S3)', 
-    'Google Cloud Platform (Vertex AI, BigQuery)',
-    'Docker & Containerization',
-    'CI/CD Pipelines (GitHub Actions, Jenkins)',
-    'Infrastructure as Code (Terraform)',
-    'Monitoring & Logging (Prometheus, Grafana)'
-  ],
-  'AI/ML Specializations': [
-    'Generative AI & LLM Fine-tuning',
-    'Computer Vision & Image Processing',
-    'Natural Language Understanding',
-    'Reinforcement Learning',
-    'Time Series Analysis',
-    'AI Ethics & Responsible AI'
-  ],
-  'Business & Leadership': [
-    'Technical Leadership',
-    'Startup Strategy & Execution',
-    'Product Management for AI Solutions',
-    'Stakeholder Communication',
-    'Mentorship & Team Building',
-    'Agile & Scrum Methodologies'
+  'Cloud / Other': [
+    'AWS Basics',
+    'Deployment',
+    'API Integration',
+    'System Design'
   ],
 }
 
@@ -188,58 +183,104 @@ export const projects = [
   },
 ]
 
+export const featuredProjects = [
+  {
+    title: 'FractureVision-AI',
+    category: 'Healthcare AI',
+    summary: 'AI-powered medical imaging system for fracture detection using deep learning.',
+    problem: 'Manual X-ray review can be slow and inconsistent.',
+    solution: 'Built an EfficientNet-based classification pipeline with Grad-CAM explainability.',
+    impact: 'Supports faster fracture screening and explainable AI-assisted decisions.',
+    tech: ['Python', 'PyTorch/TensorFlow', 'EfficientNet', 'Grad-CAM', 'Streamlit'],
+    link: null,
+    github: null
+  },
+  {
+    title: 'Hospital Pulse AI',
+    category: 'Predictive Healthcare',
+    summary: 'Predictive healthcare intelligence system for hospital stress analysis.',
+    problem: 'Hospitals often react late to operational overload.',
+    solution: 'Built forecasting workflows and dashboards for early warning signals.',
+    impact: 'Helps visualize hospital load and decision-support indicators.',
+    tech: ['Python', 'ML', 'Streamlit', 'FastAPI', 'Data Visualization'],
+    link: 'https://github.com/ByteQuest-2025/GFGBQ-Team-hopx',
+    github: 'https://github.com/ByteQuest-2025/GFGBQ-Team-hopx'
+  },
+  {
+    title: 'FlowX',
+    category: 'Traffic Intelligence',
+    summary: 'Traffic intelligence and optimization system for dynamic congestion and emergency routing.',
+    problem: 'Static traffic signals fail during dynamic congestion and emergency routes.',
+    solution: 'Built YOLO-based vehicle detection with adaptive signal logic and emergency prioritization.',
+    impact: 'Demonstrates AI-based traffic optimization and real-time density monitoring.',
+    tech: ['YOLOv8', 'Python', 'OpenCV', 'Streamlit', 'ML'],
+    link: null,
+    github: null
+  },
+  {
+    title: 'Revibe Lab',
+    category: 'Sustainable AI',
+    summary: 'AI-driven innovation platform for e-waste and sustainable problem solving.',
+    problem: 'Students and builders lack guided pathways to convert e-waste into useful innovation ideas.',
+    solution: 'Built AI-guided recommendation flows, learning resources, and project-start guidance.',
+    impact: 'Encourages sustainable innovation and accessible project building.',
+    tech: ['React/Next.js', 'Python', 'AI APIs', 'Recommendation Logic'],
+    link: 'https://revibe-lab.netlify.app',
+    github: null
+  },
+]
+
 export const experience = [
   {
-    role: 'Founder & AI/ML Engineer',
+    role: 'Founder — TechNeekX',
     company: 'TechNeekX',
-    period: '2026 – Present',
+    period: '2025 – Present',
     points: [
-      'Lead innovation and research initiatives, overseeing technical strategy for multiple AI-powered platforms and solutions.',
-      'Mentored team members in full-stack development and AI/ML implementation, fostering a culture of technical excellence.',
-      'Developed proprietary AI algorithms that improved operational efficiency by 40% across client deployments.',
-      'Led technical due diligence for investor presentations, successfully raising seed funding round.'
+      'Built and grew TechNeekX into a community of AI builders, hackathon teams, and early-stage founders.',
+      'Led product strategy, technical execution, and community programming for 100+ members.',
+      'Designed mentorship workflows, project pathways, and founder-focused launch support.',
+      'Delivered 4+ events including InnVedX, Kalpathon, and Vibe Designing.'
     ]
   },
   {
-    role: 'Ex-Chairman , AI/ML Engineer',
-    company: 'HanuBell',
-    period: '2024 – 2025',
+    role: 'Python Developer Intern',
+    company: 'Woject Technologies',
+    period: 'Dec 2025 – Mar 2026',
     points: [
-      'Lead innovation and research initiatives, overseeing technical strategy for multiple AI-powered platforms.',
-      'Spearheaded the development of HANU-Youth App and Hanu-Planner, integrating AI/ML solutions with web technologies.',
-      'Mentored team members in full-stack development and AI/ML implementation, fostering a culture of technical excellence.'
-    ],
+      'Developed and maintained Python-based APIs using FastAPI and Django.',
+      'Implemented data processing pipelines and integrated machine learning workflows.',
+      'Delivered production-ready backend services for real-time analytics and reporting.'
+    ]
   },
   {
     role: 'Python Developer Intern',
-    company: 'Wojekt Technologies',
-    period: 'Dec 2025 – Feb 2026',
+    company: 'QSkill',
+    period: 'Apr 2026 – May 2026',
     points: [
-      'Developing and maintaining Python-based applications and APIs using FastAPI and Django frameworks.',
-      'Implementing data processing pipelines and integrating machine learning models into production systems.',
-      'Collaborating with cross-functional teams to design and deploy scalable backend services.'
-    ],
+      'Built Python automation scripts and model deployment workflows.',
+      'Collaborated with product and engineering teams to ship data-driven features.',
+      'Optimized backend infrastructure for reliability and performance.'
+    ]
+  },
+  {
+    role: 'Ex-Chairman, AI/ML Engineer',
+    company: 'HanuBell',
+    period: '2024 – 2025',
+    points: [
+      'Spearheaded AI product development for education and community platforms.',
+      'Managed cross-functional engineering teams and architecture decisions.',
+      'Delivered multiple AI-enabled systems used by active platform users.'
+    ]
   },
   {
     role: 'Campus Ambassador',
     company: 'EduVeda Academy',
     period: 'Nov 2025 – Dec 2025',
     points: [
-      'Represented EduVeda Academy on campus, promoting educational programs and initiatives.',
-      'Organized and facilitated workshops on emerging technologies and career development.',
-      'Acted as a liaison between students and the academy, providing feedback and improving program offerings.'
-    ],
+      'Organized campus workshops and technical training sessions.',
+      'Served as a bridge between students and the academy for program growth.'
+    ]
   },
-  {
-    role: 'Content Writer',
-    company: 'Cook and Clean Company',
-    period: 'Mar 2024 – May 2024',
-    points: [
-      'Created SEO-optimized content that increased web traffic by 30%.',
-      'Developed technical documentation and user guides for digital products.',
-      'Collaborated with marketing teams to align content with business objectives and brand voice.'
-    ],
-  }
 ]
 
 export const certifications = [
@@ -253,6 +294,37 @@ export const certifications = [
   'Common aptitude tests – ICAT Certification ',
   'Ryan INMUN (ILO Committee) – High Commendation (International Event)',
   'Data Visualization with Python'
+]
+
+export const topCertifications = [
+  'Machine Learning Using Python',
+  'Introduction to Generative AI — Google Cloud',
+  'Business Analytics with Excel',
+  'Data Visualization with Python',
+  'Kaggle ML / SQL / Deep Learning'
+]
+
+export const achievementHighlights = [
+  {
+    label: 'Hackathon Win',
+    title: 'IIT Mandi HackBio Winner',
+    detail: 'Awarded 1st place for a healthcare AI solution at the IIT Mandi HackBio event.'
+  },
+  {
+    label: 'Finalist',
+    title: 'IIT Patna Hackathon Finalist',
+    detail: 'Reached the final round with a product-focused AI system for smart operations.'
+  },
+  {
+    label: 'Prize',
+    title: 'Tech Expo 2nd Prize',
+    detail: 'Secured 2nd place at the Tech Expo for an innovation-driven AI platform.'
+  },
+  {
+    label: 'Recognition',
+    title: 'INMUN High Commendation',
+    detail: 'Received a high commendation for leadership at the 21st International Model United Nations.'
+  },
 ]
 
 export const achievements = [
