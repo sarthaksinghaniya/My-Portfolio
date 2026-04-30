@@ -9,7 +9,7 @@ export const profile = {
     linkedin: 'https://www.linkedin.com/in/sarthak-singhaniya-a4ab9a323',
     github: 'https://github.com/sarthaksinghaniya',
     portfolio: 'https://reviber.netlify.app',
-    resume: '/Sarthak_Resume.pdf',
+    resume: '/Sarthak Singhaniya - Copy.pdf',
     instagram: 'https://www.instagram.com/sarthak_shubh_?igsh=MWtsbGFnZHljejRoZA==',
     leetcode: 'https://leetcode.com/u/FYCfvXYnxf/',
     unstop: 'https://unstop.com/u/sarthsin39721',
