@@ -91,10 +91,10 @@ export const projects = [
     ]
   },
   {
-    title: 'ReviveLab',
+    title: 'Revive-hub',
     description: 'An innovative AI-powered platform that revolutionizes e-waste management through computer vision and machine learning. The system automatically identifies and classifies electronic components, provides repair guides, and suggests upcycling opportunities, significantly reducing e-waste.',
     tech: ['Python', 'TensorFlow', 'OpenCV', 'Flask', 'React', 'MongoDB', 'Docker'],
-    link: 'https://revibe-lab.netlify.app',
+    link: 'https://revibe-hub.netlify.app',
     highlights: [
       'Developed a custom YOLOv8 model achieving 94.5% accuracy in component recognition',
       'Implemented a knowledge graph to suggest repair and upcycling options',
@@ -130,19 +130,6 @@ export const projects = [
     ]
   },
   {
-    title: 'Path Sarthi',
-    description: 'An innovative AI-powered platform that predicts and suggests analytical career paths for students based on their skills, interests, and market trends. The system leverages machine learning algorithms to provide personalized recommendations and resources for skill development.',
-    tech: ['Python', 'next.js', 'OpenCV', 'React', 'MongoDB', 'Docker'],
-    link: 'https://path-sarthi--sarthakshubh.replit.app',
-    highlights: [
-      'Developed a custom YOLOv8 model achieving 94.5% accuracy predicting career paths',
-      'Implemented a knowledge graph to suggest skill development options',
-      'Integrated with Unstp and linkedin for real-time component analysis',
-      'Tried Replit deployment for hosting the project and automate the workflow',
-      'Featured in 2 tech publications for innovation in career guidance'
-    ]
-  },
-  {
     title: 'HanuAI Chatbot',
     description: 'An enterprise-grade conversational AI platform that combines multiple LLMs with domain-specific knowledge graphs to deliver human-like interactions. The system handles 10,000+ monthly queries with 92% accuracy.',
     tech: ['Python', 'Hugging Face', 'LangChain', 'Pinecone', 'FastAPI', 'React'],
@@ -172,7 +159,7 @@ export const projects = [
     title: 'Hospital Pulse AI',
     description: 'An interpretable, proactive decision-support system that forecasts operational stress in healthcare facilities and recommends preventive actions before overload occurs. The system addresses Emergency Department surges, ICU bed shortages, and staff overload through early warning mechanisms.',
     tech: ['Python', 'TensorFlow', 'Scikit-learn', 'React', 'Node.js', 'MongoDB', 'Docker', 'Time Series Analysis'],
-    link: 'https://github.com/ByteQuest-2025/GFGBQ-Team-hopx',
+    link: 'https://github.com/sarthaksinghaniya/Hospital-Pulse-AI',
     highlights: [
       'Developed predictive models achieving 92% accuracy in forecasting ED surges 6 hours in advance',
       'Implemented interpretable AI using SHAP values for clinical decision support',
@@ -192,8 +179,8 @@ export const featuredProjects = [
     solution: 'Built an EfficientNet-based classification pipeline with Grad-CAM explainability.',
     impact: 'Supports faster fracture screening and explainable AI-assisted decisions.',
     tech: ['Python', 'PyTorch/TensorFlow', 'EfficientNet', 'Grad-CAM', 'Streamlit'],
-    link: null,
-    github: null
+    link: 'https://fracturevision-ai.streamlit.app/',
+    github: 'https://github.com/sarthaksinghaniya/fracturevision-ai'
   },
   {
     title: 'Hospital Pulse AI',
@@ -203,8 +190,8 @@ export const featuredProjects = [
     solution: 'Built forecasting workflows and dashboards for early warning signals.',
     impact: 'Helps visualize hospital load and decision-support indicators.',
     tech: ['Python', 'ML', 'Streamlit', 'FastAPI', 'Data Visualization'],
-    link: 'https://github.com/ByteQuest-2025/GFGBQ-Team-hopx',
-    github: 'https://github.com/ByteQuest-2025/GFGBQ-Team-hopx'
+    link: 'https://hopx.netlify.app',
+    github: 'https://github.com/sarthaksinghaniya/Hospital-Pulse-AI'
   },
   {
     title: 'FlowX',
@@ -215,18 +202,18 @@ export const featuredProjects = [
     impact: 'Demonstrates AI-based traffic optimization and real-time density monitoring.',
     tech: ['YOLOv8', 'Python', 'OpenCV', 'Streamlit', 'ML'],
     link: null,
-    github: null
+    github: 'https://github.com/sarthaksinghaniya/FlowX'
   },
   {
-    title: 'Revibe Lab',
+    title: 'Revibe-hub',
     category: 'Sustainable AI',
     summary: 'AI-driven innovation platform for e-waste and sustainable problem solving.',
     problem: 'Students and builders lack guided pathways to convert e-waste into useful innovation ideas.',
     solution: 'Built AI-guided recommendation flows, learning resources, and project-start guidance.',
     impact: 'Encourages sustainable innovation and accessible project building.',
     tech: ['React/Next.js', 'Python', 'AI APIs', 'Recommendation Logic'],
-    link: 'https://revibe-lab.netlify.app',
-    github: null
+    link: 'https://revibe-hub.netlify.app',
+    github: 'https://github.com/sarthaksinghaniya/revibe-ai'
   },
 ]
 
@@ -270,6 +257,16 @@ export const experience = [
       'Spearheaded AI product development for education and community platforms.',
       'Managed cross-functional engineering teams and architecture decisions.',
       'Delivered multiple AI-enabled systems used by active platform users.'
+    ]
+  },
+  {
+    role: 'Content Writer',
+    company: 'CooknClean',
+    period: 'Mar 2025 – Apr 2025',
+    points: [
+      'Created compelling product and service content for CooknClean’s digital channels.',
+      'Collaborated with marketing and design teams to align messaging with brand voice.',
+      'Produced SEO-friendly articles and social copy to increase engagement.'
     ]
   },
   {
