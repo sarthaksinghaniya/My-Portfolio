@@ -63,7 +63,9 @@ A modern, feature-rich portfolio website with real-time data integration, intera
 ```
 portfolio-sarthak/
 ├─ public/
-│  ├─ icons/profile.jpeg
+│  ├─ icons/
+│  │  ├─ profile.jpeg
+│  │  ├─ sarthak-profile.jpg
 │  ├─ Sarthak Singhaniya - Copy.pdf
 │  ├─ robots.txt
 │  ├─ sitemap.xml
