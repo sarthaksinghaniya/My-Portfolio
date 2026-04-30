@@ -1,5 +1,4 @@
 import React from 'react'
-import { useTheme } from './ThemeProvider'
 import { profile } from '../data/content'
 
 const links = [
@@ -14,7 +13,6 @@ const links = [
 ]
 
 export default function Navbar() {
-  const { theme, toggle } = useTheme()
   const [active, setActive] = React.useState('#home')
 
   React.useEffect(() => {
@@ -66,12 +64,6 @@ export default function Navbar() {
               <path d="M7 2C4.243 2 2 4.243 2 7v10c0 2.757 2.243 5 5 5h10c2.757 0 5-2.243 5-5V7c0-2.757-2.243-5-5-5H7zm0 2h10c1.654 0 3 1.346 3 3v10c0 1.654-1.346 3-3 3H7c-1.654 0-3-1.346-3-3V7c0-1.654 1.346-3 3-3zm11 1a1 1 0 100 2 1 1 0 000-2zM12 7a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6z" />
             </svg>
           </a>
-          <button aria-label="Toggle theme" onClick={toggle} className="btn btn-ghost">
-            {theme === 'dark' ? '🌙' : '🌟'}
-          </button>
-        </div>
-        <div className="md:hidden">
-          <button onClick={toggle} className="btn btn-ghost" aria-label="Toggle theme">{theme === 'dark' ? '🌙' : '☀️'}</button>
         </div>
       </nav>
     </header>
