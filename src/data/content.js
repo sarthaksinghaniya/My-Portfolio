@@ -35,7 +35,7 @@ export const liveProofs = [
   { label: '50+ Hackathons', value: '50+' },
   { label: 'IIT Mandi Winner', value: 'Winner' },
   { label: '100+ Community Members', value: '100+' },
-  { label: '4+ Events Led', value: '4+' },
+  { label: '5+ Events Led', value: '5+' },
   { label: 'Featured AI Projects', value: '10+' }
 ]
 
