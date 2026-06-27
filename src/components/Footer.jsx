@@ -1,31 +1,40 @@
-import React from 'react'
-import { profile } from '../data/content'
+import { FaGithub, FaLinkedin, FaEnvelope, FaGlobe } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <footer className="py-10 border-t border-white/10">
-      <div className="container flex flex-col sm:flex-row items-center justify-between gap-3 text-slate-400">
-        <p>© 2025 Sarthak Singhaniya</p>
-        <div className="flex items-center gap-5">
-          <div className="flex gap-4">
-            <a href="#home" className="hover:text-white">Home</a>
-            <a href="#projects" className="hover:text-white">Projects</a>
-            <a href="#contact" className="hover:text-white">Contact</a>
+    <footer className="relative bg-dark-900 border-t-4 border-stone pt-16 pb-8 overflow-hidden">
+      {/* Decorative Gate Elements */}
+      <div className="absolute top-0 left-0 w-16 h-16 bg-stone" style={{ clipPath: "polygon(0 0, 100% 0, 0 100%)" }} />
+      <div className="absolute top-0 right-0 w-16 h-16 bg-stone" style={{ clipPath: "polygon(0 0, 100% 0, 100% 100%)" }} />
+      
+      <div className="max-w-7xl mx-auto px-6 md:px-12 w-full relative z-10 flex flex-col items-center">
+        
+        <div className="mb-8 border-b-2 border-stone/30 pb-8 w-full flex flex-col md:flex-row justify-between items-center gap-6">
+          <div className="text-center md:text-left">
+            <h2 className="font-display font-bold text-2xl text-primary text-glow mb-2">The Kingdom of Sarthak</h2>
+            <p className="text-stone text-sm">Building the future, one line of code at a time.</p>
           </div>
-          <a
-            href={profile.links.instagram}
-            target="_blank"
-            rel="noreferrer"
-            aria-label="Instagram"
-            className="text-slate-400 hover:text-white"
-            title="Instagram"
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
-              <path d="M7 2C4.243 2 2 4.243 2 7v10c0 2.757 2.243 5 5 5h10c2.757 0 5-2.243 5-5V7c0-2.757-2.243-5-5-5H7zm0 2h10c1.654 0 3 1.346 3 3v10c0 1.654-1.346 3-3 3H7c-1.654 0-3-1.346-3-3V7c0-1.654 1.346-3 3-3zm11 1a1 1 0 100 2 1 1 0 000-2zM12 7a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6z" />
-            </svg>
-          </a>
+          
+          <div className="flex gap-6">
+            <a href="#" className="w-12 h-12 bg-dark-800 border border-stone flex items-center justify-center rounded-lg text-white hover:border-primary hover:text-primary transition-all shadow-[0_0_10px_rgba(0,0,0,0.5)] hover:shadow-[0_0_15px_rgba(247,201,72,0.4)] group">
+              <FaGithub size={24} className="group-hover:scale-110 transition-transform" />
+            </a>
+            <a href="#" className="w-12 h-12 bg-dark-800 border border-stone flex items-center justify-center rounded-lg text-white hover:border-primary hover:text-primary transition-all shadow-[0_0_10px_rgba(0,0,0,0.5)] hover:shadow-[0_0_15px_rgba(247,201,72,0.4)] group">
+              <FaLinkedin size={24} className="group-hover:scale-110 transition-transform" />
+            </a>
+            <a href="#" className="w-12 h-12 bg-dark-800 border border-stone flex items-center justify-center rounded-lg text-white hover:border-primary hover:text-primary transition-all shadow-[0_0_10px_rgba(0,0,0,0.5)] hover:shadow-[0_0_15px_rgba(247,201,72,0.4)] group">
+              <FaGlobe size={24} className="group-hover:scale-110 transition-transform" />
+            </a>
+            <a href="#" className="w-12 h-12 bg-dark-800 border border-stone flex items-center justify-center rounded-lg text-white hover:border-primary hover:text-primary transition-all shadow-[0_0_10px_rgba(0,0,0,0.5)] hover:shadow-[0_0_15px_rgba(247,201,72,0.4)] group">
+              <FaEnvelope size={24} className="group-hover:scale-110 transition-transform" />
+            </a>
+          </div>
+        </div>
+
+        <div className="text-stone text-xs font-display tracking-widest uppercase">
+          &copy; {new Date().getFullYear()} Sarthak Singhaniya. All Rights Reserved.
         </div>
       </div>
     </footer>
-  )
+  );
 }
