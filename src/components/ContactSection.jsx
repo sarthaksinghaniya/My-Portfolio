@@ -23,7 +23,7 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="relative py-24 min-h-screen flex items-center bg-dark-900 bg-[url('/bg-pattern.png')] bg-repeat">
+    <section id="contact" className="relative pt-24 pb-48 min-h-screen flex items-center bg-dark-900 bg-[url('/bg-pattern.png')] bg-repeat">
       <div className="absolute inset-0 bg-dark-900/90 z-0" />
       
       <div className="max-w-3xl mx-auto px-6 md:px-12 w-full relative z-10">

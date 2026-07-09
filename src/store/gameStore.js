@@ -16,6 +16,10 @@ export const useGameStore = create((set) => ({
   // Achievements
   unlockedAchievements: [],
   recentAchievement: null,
+  
+  // World State
+  inventory: [],
+  activeZone: null,
 
   // Actions
   setLoading: (status) => set({ isLoading: status }),
@@ -25,6 +29,11 @@ export const useGameStore = create((set) => ({
   startBossFight: () => set({ bossFightActive: true }),
   endBossFight: () => set({ bossFightActive: false }),
   setBossTransitioning: (status) => set({ isBossTransitioning: status }),
+  
+  addToInventory: (item) => set((state) => ({ 
+    inventory: [...state.inventory, item] 
+  })),
+  setActiveZone: (zone) => set({ activeZone: zone }),
   
   addXP: (amount) => set((state) => ({ xp: Math.min(state.xp + amount, 10000) })),
   

@@ -5,41 +5,7 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import TiltCard from "./TiltCard";
-
-const campaignLevels = [
-  {
-    level: 1,
-    title: "Content Writer",
-    role: "The Beginning",
-    description: "Started the journey by sharing knowledge and building a foundational understanding of tech concepts.",
-    year: "2020",
-    position: "left"
-  },
-  {
-    level: 5,
-    title: "Python Intern",
-    role: "First Quest",
-    description: "Entered the professional realm, scripting solutions and automating tasks to gain real-world experience.",
-    year: "2021",
-    position: "right"
-  },
-  {
-    level: 10,
-    title: "Founder",
-    role: "Leadership",
-    description: "Established a tech community, leading teams and building products from the ground up.",
-    year: "2023",
-    position: "left"
-  },
-  {
-    level: 15,
-    title: "AI Engineer",
-    role: "Current Mastery",
-    description: "Architecting intelligent systems and pioneering AI solutions for complex problems.",
-    year: "Present",
-    position: "right"
-  }
-];
+import { experience } from "../data/content";
 
 export default function ExperienceSection() {
   const containerRef = useRef(null);
@@ -97,26 +63,36 @@ export default function ExperienceSection() {
           />
 
           <div className="space-y-24">
-            {campaignLevels.map((campaign, index) => (
+            {experience.map((campaign) => (
               <motion.div 
                 key={campaign.level}
-                initial={{ opacity: 0, x: campaign.position === "left" ? -50 : 50 }}
+                initial={{ opacity: 0, x: campaign.position === "top" || campaign.position === "left" ? -50 : 50 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.6 }}
-                className={`relative flex items-center ${campaign.position === "left" ? "flex-row-reverse" : "flex-row"} w-full z-10`}
+                className={`relative flex items-center ${campaign.position === "top" || campaign.position === "left" ? "flex-row-reverse" : "flex-row"} w-full z-10`}
               >
                 
-                {/* Content Card */}
-                <div className={`w-5/12 ${campaign.position === "left" ? "text-right pr-8" : "text-left pl-8"}`}>
-                  <TiltCard intensity={5} className="inline-block w-full max-w-sm">
-                    <div className="game-card p-6 relative bg-gradient-to-br from-dark-800 to-dark-900 group border border-stone/20">
+                <div className={`w-5/12 flex ${campaign.position === "top" || campaign.position === "left" ? "justify-end pr-4 md:pr-8" : "justify-start pl-4 md:pl-8"}`}>
+                  <TiltCard intensity={5} className="w-full max-w-md">
+                    <div className="game-card p-6 md:p-8 text-left relative bg-gradient-to-br from-dark-800 to-dark-900 group border border-stone/20">
                       <span className="absolute -top-3 -right-3 bg-dark-900 border-2 border-primary text-primary text-xs font-bold px-3 py-1 shadow-[0_0_15px_rgba(247,201,72,0.6)] z-10" style={{ transform: "translateZ(20px)" }}>
-                        {campaign.year}
+                        {campaign.period}
                       </span>
-                      <h3 className="text-2xl font-display font-bold text-white mb-1 group-hover:text-primary transition-colors" style={{ transform: "translateZ(25px)" }}>{campaign.title}</h3>
-                      <h4 className="text-primary font-bold tracking-widest text-sm uppercase mb-4" style={{ transform: "translateZ(15px)" }}>{campaign.role}</h4>
+                      <h3 className="text-xl md:text-2xl font-display font-bold text-white mb-1 group-hover:text-primary transition-colors" style={{ transform: "translateZ(25px)" }}>{campaign.role}</h3>
+                      <h4 className="text-primary font-bold tracking-widest text-xs md:text-sm uppercase mb-4" style={{ transform: "translateZ(15px)" }}>{campaign.company}</h4>
                       <p className="text-stone text-sm leading-relaxed" style={{ transform: "translateZ(10px)" }}>{campaign.description}</p>
+                      
+                      {campaign.points && campaign.points.length > 0 && (
+                        <ul className="mt-4 space-y-2 text-stone/80 text-xs md:text-sm" style={{ transform: "translateZ(5px)" }}>
+                          {campaign.points.map((point, idx) => (
+                            <li key={idx} className="flex gap-2 items-start">
+                              <span className="text-primary mt-1 text-[10px]">▶</span>
+                              <span className="leading-relaxed">{point}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      )}
                     </div>
                   </TiltCard>
                 </div>

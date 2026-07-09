@@ -1,6 +1,9 @@
 import { FaGithub, FaLinkedin, FaEnvelope, FaGlobe } from "react-icons/fa";
+import { profile } from "../data/content";
 
 export default function Footer() {
+  const firstName = profile.name.split(' ')[0];
+  
   return (
     <footer className="relative bg-dark-900 border-t-4 border-stone pt-16 pb-8 overflow-hidden">
       {/* Decorative Gate Elements */}
@@ -11,28 +14,28 @@ export default function Footer() {
         
         <div className="mb-8 border-b-2 border-stone/30 pb-8 w-full flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="text-center md:text-left">
-            <h2 className="font-display font-bold text-2xl text-primary text-glow mb-2">The Kingdom of Sarthak</h2>
+            <h2 className="font-display font-bold text-2xl text-primary text-glow mb-2">The Kingdom of {firstName}</h2>
             <p className="text-stone text-sm">Building the future, one line of code at a time.</p>
           </div>
           
           <div className="flex gap-6">
-            <a href="#" className="w-12 h-12 bg-dark-800 border border-stone flex items-center justify-center rounded-lg text-white hover:border-primary hover:text-primary transition-all shadow-[0_0_10px_rgba(0,0,0,0.5)] hover:shadow-[0_0_15px_rgba(247,201,72,0.4)] group">
+            <a href={profile.links.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile" className="w-12 h-12 bg-dark-800 border border-stone flex items-center justify-center rounded-lg text-white hover:border-primary hover:text-primary transition-all shadow-[0_0_10px_rgba(0,0,0,0.5)] hover:shadow-[0_0_15px_rgba(247,201,72,0.4)] group">
               <FaGithub size={24} className="group-hover:scale-110 transition-transform" />
             </a>
-            <a href="#" className="w-12 h-12 bg-dark-800 border border-stone flex items-center justify-center rounded-lg text-white hover:border-primary hover:text-primary transition-all shadow-[0_0_10px_rgba(0,0,0,0.5)] hover:shadow-[0_0_15px_rgba(247,201,72,0.4)] group">
+            <a href={profile.links.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile" className="w-12 h-12 bg-dark-800 border border-stone flex items-center justify-center rounded-lg text-white hover:border-primary hover:text-primary transition-all shadow-[0_0_10px_rgba(0,0,0,0.5)] hover:shadow-[0_0_15px_rgba(247,201,72,0.4)] group">
               <FaLinkedin size={24} className="group-hover:scale-110 transition-transform" />
             </a>
-            <a href="#" className="w-12 h-12 bg-dark-800 border border-stone flex items-center justify-center rounded-lg text-white hover:border-primary hover:text-primary transition-all shadow-[0_0_10px_rgba(0,0,0,0.5)] hover:shadow-[0_0_15px_rgba(247,201,72,0.4)] group">
+            <a href={profile.links.portfolio} target="_blank" rel="noopener noreferrer" aria-label="Portfolio Website" className="w-12 h-12 bg-dark-800 border border-stone flex items-center justify-center rounded-lg text-white hover:border-primary hover:text-primary transition-all shadow-[0_0_10px_rgba(0,0,0,0.5)] hover:shadow-[0_0_15px_rgba(247,201,72,0.4)] group">
               <FaGlobe size={24} className="group-hover:scale-110 transition-transform" />
             </a>
-            <a href="#" className="w-12 h-12 bg-dark-800 border border-stone flex items-center justify-center rounded-lg text-white hover:border-primary hover:text-primary transition-all shadow-[0_0_10px_rgba(0,0,0,0.5)] hover:shadow-[0_0_15px_rgba(247,201,72,0.4)] group">
+            <a href={`mailto:${profile.email}`} aria-label="Email Contact" className="w-12 h-12 bg-dark-800 border border-stone flex items-center justify-center rounded-lg text-white hover:border-primary hover:text-primary transition-all shadow-[0_0_10px_rgba(0,0,0,0.5)] hover:shadow-[0_0_15px_rgba(247,201,72,0.4)] group">
               <FaEnvelope size={24} className="group-hover:scale-110 transition-transform" />
             </a>
           </div>
         </div>
 
         <div className="text-stone text-xs font-display tracking-widest uppercase">
-          &copy; {new Date().getFullYear()} Sarthak Singhaniya. All Rights Reserved.
+          &copy; {new Date().getFullYear()} {profile.name}. All Rights Reserved.
         </div>
       </div>
     </footer>

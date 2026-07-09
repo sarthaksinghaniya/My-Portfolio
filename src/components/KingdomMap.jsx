@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useRouter } from "next/navigation";
 import { FaChessRook, FaBrain, FaShieldAlt, FaTrophy, FaScroll, FaAward, FaPaperPlane } from "react-icons/fa";
 import TiltCard from "./TiltCard";
 import MagneticElement from "./MagneticElement";
@@ -16,10 +17,15 @@ const kingdomLocations = [
 ];
 
 export default function KingdomMap() {
+  const router = useRouter();
   
   const handleTravel = (id) => {
-    // In a full implementation, this could open a modal or use Next.js routing.
-    // For now, we scroll smoothly to the section ID.
+    if (id === "journey") {
+      router.push("/journey");
+      return;
+    }
+    
+    // For other sections, scroll smoothly to the section ID.
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
@@ -56,7 +62,7 @@ export default function KingdomMap() {
                 <MagneticElement intensity={0.1}>
                   <div 
                     onClick={() => handleTravel(loc.id)}
-                    className="group cursor-pointer flex flex-col items-center justify-center h-48 md:h-56 bg-gradient-to-b from-dark-800 to-dark-900 border-2 border-stone/30 rounded-xl relative overflow-hidden transition-all duration-300 hover:border-primary/60 shadow-[inset_0_2px_10px_rgba(0,0,0,0.8),0_5px_15px_rgba(0,0,0,0.5)]"
+                    className="group cursor-pointer flex flex-col items-center justify-center h-48 md:h-56 p-4 bg-gradient-to-b from-dark-800 to-dark-900 border-2 border-stone/30 rounded-xl relative overflow-hidden transition-all duration-300 hover:border-primary/60 shadow-[inset_0_2px_10px_rgba(0,0,0,0.8),0_5px_15px_rgba(0,0,0,0.5)] text-center"
                     style={{ transform: "translateZ(10px)" }}
                   >
                     {/* Background glow on hover */}

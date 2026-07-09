@@ -2,59 +2,10 @@
 
 import { motion } from "framer-motion";
 import { FaGithub, FaExternalLinkAlt, FaBook, FaStar, FaBolt } from "react-icons/fa";
+import Link from "next/link";
 import TiltCard from "./TiltCard";
 import MagneticElement from "./MagneticElement";
-
-const battleCards = [
-  {
-    id: 1,
-    title: "AI Agent Framework",
-    status: "Active Deployment",
-    rarity: "Legendary",
-    difficulty: 95,
-    impact: 100,
-    performance: 98,
-    description: "An autonomous agent workflow engine that reasons, plans, and writes code for complex software development tasks.",
-    tech: ["Python", "LangChain", "Next.js", "Redis"],
-    links: { github: "#", demo: "#", caseStudy: "#" },
-    achievements: ["Hackathon Winner", "Open Source Pick"],
-    gradient: "from-[#2A1B38] via-[#4C1D95] to-[#7C4DFF]",
-    borderGlow: "rgba(124, 77, 255, 0.8)",
-    textColor: "text-purple-mystic"
-  },
-  {
-    id: 2,
-    title: "Neural Search Engine",
-    status: "In Progress",
-    rarity: "Epic",
-    difficulty: 85,
-    impact: 90,
-    performance: 95,
-    description: "Semantic search engine utilizing vector embeddings to query documentation at lightning speed.",
-    tech: ["FastAPI", "Pinecone", "React", "TensorFlow"],
-    links: { github: "#" },
-    achievements: ["Performance Optimization"],
-    gradient: "from-[#0F3B2E] via-[#122C34] to-[#1E3A8A]",
-    borderGlow: "rgba(61, 220, 151, 0.8)",
-    textColor: "text-emerald-magic"
-  },
-  {
-    id: 3,
-    title: "Hackathon Matchmaker",
-    status: "Completed",
-    rarity: "Epic",
-    difficulty: 75,
-    impact: 85,
-    performance: 90,
-    description: "A platform matching developers based on complementary skills to build the ultimate hackathon squads.",
-    tech: ["React", "Node.js", "MongoDB"],
-    links: { github: "#", demo: "#" },
-    achievements: ["1000+ Users"],
-    gradient: "from-[#3B2A0C] via-[#2C1D34] to-[#4C1D95]",
-    borderGlow: "rgba(247, 201, 72, 0.8)",
-    textColor: "text-primary"
-  }
-];
+import { projects as battleCards } from "../data/content";
 
 export default function ProjectsSection() {
   return (
@@ -75,7 +26,7 @@ export default function ProjectsSection() {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-8">
           {battleCards.map((card, index) => (
             <motion.div
-              key={card.id}
+              key={card.slug}
               initial={{ opacity: 0, y: 50, rotateY: 30 }}
               whileInView={{ opacity: 1, y: 0, rotateY: 0 }}
               viewport={{ once: true, margin: "-100px" }}
@@ -132,7 +83,7 @@ export default function ProjectsSection() {
                     
                     {/* Tech Stack */}
                     <div className="flex flex-wrap gap-2 mb-6" style={{ transform: "translateZ(20px)" }}>
-                      {card.tech.map(tech => (
+                      {card.tech?.map(tech => (
                         <span key={tech} className="text-[10px] px-2 py-1 bg-dark-900 border border-stone/40 shadow-inner rounded text-stone group-hover:text-white transition-colors tracking-widest uppercase">
                           {tech}
                         </span>
@@ -141,7 +92,7 @@ export default function ProjectsSection() {
 
                     {/* Achievements */}
                     <div className="mb-6 space-y-1" style={{ transform: "translateZ(15px)" }}>
-                      {card.achievements.map((ach, i) => (
+                      {card.achievements?.map((ach, i) => (
                         <div key={i} className="text-xs text-primary font-bold flex items-center gap-2">
                           <FaStar size={10} /> {ach}
                         </div>
@@ -150,17 +101,16 @@ export default function ProjectsSection() {
 
                     {/* Actions */}
                     <div className="flex gap-4 pt-4 border-t border-stone/30 mt-auto" style={{ transform: "translateZ(25px)" }}>
-                      {card.links.github && (
+                      <MagneticElement intensity={0.2} className="flex-1">
+                        <Link href={`/projects/${card.slug}`} className="game-button w-full flex items-center justify-center text-xs py-2 gap-2 bg-dark-900 border-stone hover:border-primary text-stone hover:text-white">
+                          <FaBook size={14} /> QUEST DETAILS
+                        </Link>
+                      </MagneticElement>
+                      
+                      {card.links?.demo && (
                         <MagneticElement intensity={0.2} className="flex-1">
-                          <a href={card.links.github} className="game-button w-full flex items-center justify-center text-xs py-2 gap-2">
-                            <FaGithub size={14} /> REPOSITORY
-                          </a>
-                        </MagneticElement>
-                      )}
-                      {card.links.demo && (
-                        <MagneticElement intensity={0.2} className="flex-1">
-                          <a href={card.links.demo} className="game-button w-full flex items-center justify-center text-xs py-2 gap-2">
-                            <FaExternalLinkAlt size={14} /> DEPLOY
+                          <a href={card.links.demo} target="_blank" rel="noopener noreferrer" className="game-button w-full flex items-center justify-center text-xs py-2 gap-2">
+                            <FaExternalLinkAlt size={14} /> LAUNCH
                           </a>
                         </MagneticElement>
                       )}

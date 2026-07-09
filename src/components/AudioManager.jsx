@@ -22,7 +22,7 @@ export default function AudioManager() {
     if (ambientAudioRef.current) {
       if (!audioMuted) {
         // Requires user interaction first, might fail if auto-played
-        ambientAudioRef.current.play().catch(e => console.log("Audio play prevented by browser:", e));
+        ambientAudioRef.current.play().catch(() => {});
       } else {
         ambientAudioRef.current.pause();
       }
@@ -52,7 +52,7 @@ export default function AudioManager() {
         oscillator.start();
         oscillator.stop(audioCtx.currentTime + 0.1);
       } catch (e) {
-        console.log("Web audio api error", e);
+        // Web audio api error
       }
     };
 
