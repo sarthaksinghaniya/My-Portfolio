@@ -1,5 +1,7 @@
 import { projects } from "../data/content";
 
+export const dynamic = 'force-static';
+
 export default function sitemap() {
   const baseUrl = "https://portfolio.local";
 
