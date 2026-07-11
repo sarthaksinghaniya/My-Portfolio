@@ -59,7 +59,7 @@ export default function KingdomHero() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-1 relative bg-dark-900">
             
             {/* Left Column: Avatar & Level */}
-            <div className="lg:col-span-4 p-8 flex flex-col items-center justify-center border-r border-b lg:border-b-0 border-stone/20 relative bg-gradient-to-b from-dark-800/50 to-dark-900">
+            <div className="lg:col-span-4 p-4 sm:p-8 flex flex-col items-center justify-center border-r border-b lg:border-b-0 border-stone/20 relative bg-gradient-to-b from-dark-800/50 to-dark-900">
               
               <div className="absolute top-4 left-4 flex items-center gap-2">
                 <FaCircle className="text-emerald-magic animate-pulse text-[10px]" />
@@ -67,7 +67,7 @@ export default function KingdomHero() {
               </div>
 
               <TiltCard intensity={15}>
-                <div className="w-56 h-56 relative flex items-center justify-center mb-8">
+                <div className="w-40 h-40 sm:w-56 sm:h-56 relative flex items-center justify-center mb-6 sm:mb-8">
                   <div className="absolute inset-0 bg-primary/20 rounded-full blur-2xl" />
                   <Image 
                     src="/images/avatar-frame.png" 
@@ -79,18 +79,18 @@ export default function KingdomHero() {
               </TiltCard>
 
               <div className="text-center w-full">
-                <h1 className="font-display text-3xl font-bold text-white mb-1 drop-shadow-md">{profile.name}</h1>
-                <h2 className="text-primary font-bold tracking-widest uppercase text-sm mb-4 drop-shadow-[0_0_5px_rgba(247,201,72,0.8)]">{gameStats.playerClass}</h2>
+                <h1 className="font-display text-2xl sm:text-3xl font-bold text-white mb-1 drop-shadow-md">{profile.name}</h1>
+                <h2 className="text-primary font-bold tracking-widest uppercase text-xs sm:text-sm mb-4 drop-shadow-[0_0_5px_rgba(247,201,72,0.8)]">{gameStats.playerClass}</h2>
                 
                 {/* Level Bar */}
-                <div className="bg-dark-900 border border-stone/40 rounded p-4 shadow-inner relative overflow-hidden">
+                <div className="bg-dark-900 border border-stone/40 rounded p-3 sm:p-4 shadow-inner relative overflow-hidden">
                   <div className="absolute -left-4 -top-4 w-12 h-12 bg-primary/10 rounded-full blur-md" />
                   <div className="flex justify-between items-end mb-2">
                     <div className="flex items-baseline gap-2">
-                      <span className="text-sm font-display font-bold text-stone">LEVEL</span>
-                      <span className="text-3xl font-display font-bold text-white drop-shadow">{gameStats.level}</span>
+                      <span className="text-xs sm:text-sm font-display font-bold text-stone">LEVEL</span>
+                      <span className="text-2xl sm:text-3xl font-display font-bold text-white drop-shadow">{gameStats.level}</span>
                     </div>
-                    <div className="text-xs font-bold text-primary tracking-widest">
+                    <div className="text-[10px] sm:text-xs font-bold text-primary tracking-widest">
                       <CountUp from={0} to={xp} delay={1} /> / 10,000 XP
                     </div>
                   </div>
@@ -107,39 +107,39 @@ export default function KingdomHero() {
             </div>
 
             {/* Middle Column: Stats & Mission */}
-            <div className="lg:col-span-5 p-8 flex flex-col justify-between border-r border-stone/20 relative">
-              <div className="flex justify-between items-start mb-8">
+            <div className="lg:col-span-5 p-4 sm:p-8 flex flex-col justify-between border-r lg:border-b-0 border-b border-stone/20 relative">
+              <div className="flex justify-between items-start mb-6 sm:mb-8">
                 <div>
-                  <div className="text-[10px] text-stone font-bold uppercase tracking-widest mb-1">Guild</div>
-                  <div className="flex items-center gap-2 text-purple-mystic font-display font-bold shadow-[0_0_10px_rgba(124,77,255,0.2)]">
+                  <div className="text-[9px] sm:text-[10px] text-stone font-bold uppercase tracking-widest mb-1">Guild</div>
+                  <div className="flex items-center gap-2 text-purple-mystic font-display text-sm sm:text-base font-bold shadow-[0_0_10px_rgba(124,77,255,0.2)]">
                     <FaShieldAlt /> {gameStats.guild}
                   </div>
                 </div>
                 <div className="text-right">
-                  <div className="text-[10px] text-stone font-bold uppercase tracking-widest mb-1">Class</div>
-                  <div className="text-white font-bold tracking-wide">{gameStats.playerClass}</div>
+                  <div className="text-[9px] sm:text-[10px] text-stone font-bold uppercase tracking-widest mb-1">Class</div>
+                  <div className="text-white text-sm sm:text-base font-bold tracking-wide">{gameStats.playerClass}</div>
                 </div>
               </div>
 
-              <div className="game-card p-5 mb-8 border border-primary/20 bg-dark-800/50">
-                <div className="flex items-center gap-2 mb-3">
+              <div className="game-card p-4 sm:p-5 mb-6 sm:mb-8 border border-primary/20 bg-dark-800/50">
+                <div className="flex items-center gap-2 mb-2 sm:mb-3">
                   <FaStar className="text-primary animate-pulse" />
-                  <h3 className="font-display font-bold text-primary tracking-widest text-sm uppercase">Active Mission</h3>
+                  <h3 className="font-display font-bold text-primary tracking-widest text-xs sm:text-sm uppercase">Active Mission</h3>
                 </div>
-                <p className="text-white/90 text-sm leading-relaxed">
+                <p className="text-white/90 text-xs sm:text-sm leading-relaxed">
                   &quot;{profile.objective}&quot;
                 </p>
               </div>
 
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-2 gap-3 sm:gap-4">
                 {gameStats.stats.map((stat, i) => {
                   const hasPlus = typeof stat.value === 'string' && stat.value.includes('+');
                   return (
-                    <div key={stat.label} className="bg-dark-900 border border-stone/30 p-3 flex flex-col items-center justify-center rounded shadow-inner group">
-                      <div className="text-2xl font-display font-bold text-white group-hover:text-primary transition-colors flex items-center gap-2">
+                    <div key={stat.label} className="bg-dark-900 border border-stone/30 p-2 sm:p-3 flex flex-col items-center justify-center rounded shadow-inner group">
+                      <div className="text-xl sm:text-2xl font-display font-bold text-white group-hover:text-primary transition-colors flex items-center gap-2">
                         <CountUp from={0} to={stat.value} delay={1.5 + (i * 0.1)} suffix={hasPlus ? '+' : ''} />
                       </div>
-                      <div className="text-[9px] text-stone font-bold uppercase tracking-widest text-center mt-1 flex items-center gap-1">
+                      <div className="text-[8px] sm:text-[9px] text-stone font-bold uppercase tracking-widest text-center mt-1 flex items-center gap-1">
                         {ICON_MAP[stat.icon]} {stat.label}
                       </div>
                     </div>
@@ -149,7 +149,7 @@ export default function KingdomHero() {
             </div>
 
             {/* Right Column: Abilities & Actions */}
-            <div className="lg:col-span-3 p-8 flex flex-col justify-between bg-dark-800/30">
+            <div className="lg:col-span-3 p-4 sm:p-8 flex flex-col justify-between bg-dark-800/30">
               
               <div>
                 <div className="text-[10px] text-stone font-bold uppercase tracking-widest mb-4">Special Abilities</div>

@@ -1,9 +1,10 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { FaTimes } from "react-icons/fa";
 
 const navItems = [
   { name: "Home", href: "/" },
@@ -18,14 +19,12 @@ const navItems = [
 export default function Navigation() {
   const [activeTab, setActiveTab] = useState(navItems[0].name);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
-      
-      // Simple intersection observer logic can be added later to update activeTab based on scroll position
-      // For now, let's keep it simple
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -73,8 +72,11 @@ export default function Navigation() {
           ))}
         </ul>
 
-        {/* Mobile Menu Button (Placeholder for now) */}
-        <button className="md:hidden text-primary p-2">
+        {/* Mobile Menu Button */}
+        <button 
+          onClick={() => setIsMobileMenuOpen(true)}
+          className="md:hidden text-primary p-2 hover:bg-primary/10 rounded transition-colors"
+        >
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <line x1="3" y1="12" x2="21" y2="12"></line>
             <line x1="3" y1="6" x2="21" y2="6"></line>
@@ -82,6 +84,43 @@ export default function Navigation() {
           </svg>
         </button>
       </nav>
+
+      {/* Mobile Navigation Overlay */}
+      <AnimatePresence>
+        {isMobileMenuOpen && (
+          <motion.div 
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            className="fixed inset-0 bg-dark-900/95 backdrop-blur-xl z-50 flex flex-col pt-20 px-6 md:hidden"
+          >
+            <button 
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="absolute top-6 right-6 text-primary p-2 hover:bg-primary/10 rounded transition-colors"
+            >
+              <FaTimes size={24} />
+            </button>
+            <ul className="flex flex-col space-y-6 mt-10">
+              {navItems.map((item) => (
+                <li key={item.name}>
+                  <Link
+                    href={item.href}
+                    onClick={() => {
+                      setActiveTab(item.name);
+                      setIsMobileMenuOpen(false);
+                    }}
+                    className={`block w-full text-center py-4 font-display text-2xl tracking-widest uppercase transition-colors border-b border-stone/20 ${
+                      activeTab === item.name ? "text-primary text-glow border-primary/50" : "text-stone hover:text-white"
+                    }`}
+                  >
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </motion.header>
   );
 }

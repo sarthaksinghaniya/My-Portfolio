@@ -5,9 +5,11 @@ import Navigation from "../components/Navigation";
 import LivingBackground from "../components/LivingBackground";
 import AnimatedLoadingScreen from "../components/AnimatedLoadingScreen";
 import PremiumCursor from "../components/PremiumCursor";
-import AudioManager from "../components/AudioManager";
-import AICommandConsole from "../components/AICommandConsole";
-import TavernKeeperChat from "../components/TavernKeeperChat";
+import dynamic from 'next/dynamic';
+
+const AudioManager = dynamic(() => import("../components/AudioManager"), { ssr: false });
+const AICommandConsole = dynamic(() => import("../components/AICommandConsole"), { ssr: false });
+const TavernKeeperChat = dynamic(() => import("../components/TavernKeeperChat"), { ssr: false });
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 const spaceGrotesk = Space_Grotesk({ subsets: ['latin'], variable: '--font-space' });

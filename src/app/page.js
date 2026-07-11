@@ -1,13 +1,30 @@
+import dynamic from 'next/dynamic';
 import KingdomHero from "../components/KingdomHero";
-import KingdomMap from "../components/KingdomMap";
-import KingdomSection from "../components/KingdomSection";
-import SkillsSection from "../components/SkillsSection";
-import ProjectsSection from "../components/ProjectsSection";
-import AchievementsSection from "../components/AchievementsSection";
-import CertificatesSection from "../components/CertificatesSection";
-import ContactSection from "../components/ContactSection";
-import Footer from "../components/Footer";
-import GameOverlay from "../components/game3d/GameOverlay";
+
+// Lazy load below-the-fold sections with smooth placeholders to prevent layout shift and keep anchor links working
+const KingdomMap = dynamic(() => import("../components/KingdomMap"));
+const KingdomSection = dynamic(() => import("../components/KingdomSection"), {
+  loading: () => <section id="kingdom" className="min-h-screen bg-dark-900/10 animate-pulse" />
+});
+const SkillsSection = dynamic(() => import("../components/SkillsSection"), {
+  loading: () => <section id="skills" className="min-h-screen bg-dark-900/10 animate-pulse" />
+});
+const ProjectsSection = dynamic(() => import("../components/ProjectsSection"), {
+  loading: () => <section id="projects" className="min-h-screen bg-dark-900/10 animate-pulse" />
+});
+const AchievementsSection = dynamic(() => import("../components/AchievementsSection"), {
+  loading: () => <section id="achievements" className="min-h-screen bg-dark-900/10 animate-pulse" />
+});
+const CertificatesSection = dynamic(() => import("../components/CertificatesSection"), {
+  loading: () => <section className="min-h-[50vh] bg-dark-900/10 animate-pulse" />
+});
+const ContactSection = dynamic(() => import("../components/ContactSection"), {
+  loading: () => <section id="contact" className="min-h-[80vh] bg-dark-900/10 animate-pulse" />
+});
+const Footer = dynamic(() => import("../components/Footer"));
+
+// Heavy 3D component with no SSR
+const GameOverlay = dynamic(() => import("../components/game3d/GameOverlay"), { ssr: false });
 
 export default function Home() {
   return (
