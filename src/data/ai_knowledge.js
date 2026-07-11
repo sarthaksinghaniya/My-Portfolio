@@ -32,26 +32,14 @@ export const kb = {
   // Advanced Skills Categorization
   skills: {
     technical: {
-      ai_ml: skills['AI/ML & Data Science'] || [],
-      fullstack: skills['Full-Stack Development'] || [],
-      frameworks: skills['AI/ML Frameworks & Tools'] || [],
-      cloud: skills['Cloud & DevOps'] || [],
-      specializations: skills['AI/ML Specializations'] || [],
-      business: skills['Business & Leadership'] || [],
-    },
-    tools: {
-      development: skills['Tools & Platforms'] || [],
-      design: skills['Design'] || [],
-      productivity: skills['Productivity'] || [],
-    },
-    soft: {
-      leadership: ['Team Leadership', 'Project Management'],
-      communication: ['Technical Writing', 'Public Speaking', 'Mentoring'],
-      problemSolving: ['Algorithm Design', 'System Architecture', 'Debugging'],
+      ai_ml: skills.filter(s => s.type === 'AI/ML').map(s => s.name),
+      fullstack: skills.filter(s => ['Frontend', 'Backend', 'Databases'].includes(s.type)).map(s => s.name),
+      languages: skills.filter(s => s.type === 'Languages').map(s => s.name),
+      devops: skills.filter(s => s.type === 'DevOps').map(s => s.name),
     },
     proficiency: (() => {
-      const expert = [...(skills['AI/ML & Data Science'] || []), ...(skills['Full-Stack Development'] || [])].slice(0, 8);
-      const advanced = [...(skills['AI/ML Frameworks & Tools'] || []), ...(skills['Cloud & DevOps'] || [])].slice(0, 6);
+      const expert = skills.filter(s => s.rarity === 'Legendary').map(s => s.name);
+      const advanced = skills.filter(s => s.rarity === 'Epic').map(s => s.name);
       return { expert, advanced };
     })(),
   },
@@ -170,10 +158,7 @@ export const kb = {
 
   // Helper Methods
   utils: {
-    getPrimarySkills: () => [...new Set([
-      ...(skills['AI/ML & Data Science'] || []),
-      ...(skills['Full-Stack Development'] || []),
-    ])].slice(0, 12),
+    getPrimarySkills: () => skills.filter(s => ['Languages', 'AI/ML'].includes(s.type)).map(s => s.name).slice(0, 12),
     
     getExperienceYears: () => {
       if (!experience?.length) return '2+ years';

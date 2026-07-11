@@ -7,6 +7,7 @@ import AnimatedLoadingScreen from "../components/AnimatedLoadingScreen";
 import PremiumCursor from "../components/PremiumCursor";
 import AudioManager from "../components/AudioManager";
 import AICommandConsole from "../components/AICommandConsole";
+import TavernKeeperChat from "../components/TavernKeeperChat";
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 const spaceGrotesk = Space_Grotesk({ subsets: ['latin'], variable: '--font-space' });
@@ -60,6 +61,7 @@ export default function RootLayout({ children }) {
         <AudioManager />
         {/* <AchievementManager /> */}
         <AICommandConsole />
+        <TavernKeeperChat />
         {/* <BossFightTransition /> */}
         <SmoothScrolling>
           <LivingBackground />
