@@ -7,9 +7,9 @@ import AnimatedLoadingScreen from "../components/AnimatedLoadingScreen";
 import PremiumCursor from "../components/PremiumCursor";
 import dynamic from 'next/dynamic';
 
-const AudioManager = dynamic(() => import("../components/AudioManager"), { ssr: false });
-const AICommandConsole = dynamic(() => import("../components/AICommandConsole"), { ssr: false });
-const TavernKeeperChat = dynamic(() => import("../components/TavernKeeperChat"), { ssr: false });
+const AudioManager = dynamic(() => import("../components/AudioManager"));
+const AICommandConsole = dynamic(() => import("../components/AICommandConsole"));
+const TavernKeeperChat = dynamic(() => import("../components/TavernKeeperChat"));
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 const spaceGrotesk = Space_Grotesk({ subsets: ['latin'], variable: '--font-space' });

@@ -24,7 +24,7 @@ const ContactSection = dynamic(() => import("../components/ContactSection"), {
 const Footer = dynamic(() => import("../components/Footer"));
 
 // Heavy 3D component with no SSR
-const GameOverlay = dynamic(() => import("../components/game3d/GameOverlay"), { ssr: false });
+const GameOverlay = dynamic(() => import("../components/game3d/GameOverlay"));
 
 export default function Home() {
   return (
