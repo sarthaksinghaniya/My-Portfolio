@@ -89,7 +89,7 @@ export default function SkillsSection() {
               })}
               
               {/* Empty Slots */}
-              {[...Array(15 - skills.length)].map((_, i) => (
+              {[...Array(Math.max(0, Math.max(15, Math.ceil(skills.length / 5) * 5) - skills.length))].map((_, i) => (
                 <div key={`empty-${i}`} className="aspect-square rounded border border-stone/10 bg-dark-800/30 flex items-center justify-center shadow-inner pointer-events-none">
                   <div className="w-2 h-2 rounded-full bg-stone/5" />
                 </div>

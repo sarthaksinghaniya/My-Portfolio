@@ -100,17 +100,25 @@ export default function ProjectsSection() {
                     </div>
 
                     {/* Actions */}
-                    <div className="flex gap-4 pt-4 border-t border-stone/30 mt-auto" style={{ transform: "translateZ(25px)" }}>
-                      <MagneticElement intensity={0.2} className="flex-1">
-                        <Link href={`/projects/${card.slug}`} className="game-button w-full flex items-center justify-center text-xs py-2 gap-2 bg-dark-900 border-stone hover:border-primary text-stone hover:text-white">
-                          <FaBook size={14} /> QUEST DETAILS
+                    <div className="flex gap-2 pt-4 border-t border-stone/30 mt-auto flex-wrap" style={{ transform: "translateZ(25px)" }}>
+                      <MagneticElement intensity={0.2} className="flex-1 min-w-[100px]">
+                        <Link href={`/projects/${card.slug}`} className="game-button w-full flex items-center justify-center text-xs py-2 gap-1 bg-dark-900 border-stone hover:border-primary text-stone hover:text-white px-2">
+                          <FaBook size={12} /> DETAILS
                         </Link>
                       </MagneticElement>
                       
-                      {card.links?.demo && (
-                        <MagneticElement intensity={0.2} className="flex-1">
-                          <a href={card.links.demo} target="_blank" rel="noopener noreferrer" className="game-button w-full flex items-center justify-center text-xs py-2 gap-2">
-                            <FaExternalLinkAlt size={14} /> LAUNCH
+                      {card.links?.github && card.links.github !== "#" && (
+                        <MagneticElement intensity={0.2} className="flex-1 min-w-[100px]">
+                          <a href={card.links.github} target="_blank" rel="noopener noreferrer" className="game-button w-full flex items-center justify-center text-xs py-2 gap-1 bg-dark-900 border-stone hover:border-primary text-stone hover:text-white px-2">
+                            <FaGithub size={12} /> SOURCE
+                          </a>
+                        </MagneticElement>
+                      )}
+
+                      {card.links?.demo && card.links.demo !== "#" && (
+                        <MagneticElement intensity={0.2} className="flex-1 min-w-[100px]">
+                          <a href={card.links.demo} target="_blank" rel="noopener noreferrer" className="game-button w-full flex items-center justify-center text-xs py-2 gap-1 bg-dark-900 border-stone hover:border-primary text-stone hover:text-white px-2">
+                            <FaExternalLinkAlt size={12} /> LAUNCH
                           </a>
                         </MagneticElement>
                       )}

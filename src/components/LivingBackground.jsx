@@ -64,14 +64,22 @@ export default function LivingBackground() {
         className={`absolute inset-0 bg-gradient-to-b ${timeGradients[timeOfDay]} transition-all duration-[10000ms]`} 
       />
 
-      {/* Cinematic Kingdom Art Background */}
+      {/* Cinematic Kingdom Video Background */}
       <motion.div 
-        className="absolute inset-0 z-0 opacity-40 mix-blend-screen pointer-events-none"
-        initial={{ scale: 1.1, x: "-2%" }}
-        animate={{ x: ["-2%", "2%", "-2%"] }}
-        transition={{ duration: 120, ease: "linear", repeat: Infinity }}
+        className="absolute inset-0 z-0 pointer-events-none"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 0.4 }}
+        transition={{ duration: 2 }}
       >
-        <div className="w-[110%] h-full bg-[url('/images/kingdom.png')] bg-cover bg-center bg-no-repeat" />
+        <video 
+          autoPlay 
+          loop 
+          muted 
+          playsInline
+          className="w-full h-full object-cover object-center mix-blend-screen"
+        >
+          <source src="/images/homescreen.mp4" type="video/mp4" />
+        </video>
       </motion.div>
       
       {/* Stars Layer (Only visible at night/dawn/dusk) */}

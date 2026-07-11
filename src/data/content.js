@@ -2,13 +2,13 @@ export const proofLink = 'https://drive.google.com/drive/folders/1CBeJ9os9s92ZQO
 
 export const profile = {
   name: 'Sarthak Singhaniya',
-  tagline: 'AI/ML Engineer + Full-Stack Developer + Founder of TechNeekX',
+  tagline: 'AI Engineer • Full-Stack Developer • Hackathon Winner • Founder @ TechNeekX',
   email: 'sarthaksinghaniya789@gmail.com',
   phone: '+91-6387860126',
   links: {
     linkedin: 'https://www.linkedin.com/in/sarthak-singhaniya-a4ab9a323',
     github: 'https://github.com/sarthaksinghaniya',
-    portfolio: 'https://reviber.netlify.app',
+    portfolio: 'https://sarthaksinghaniya.netlify.app',
     resume: '/Sarthak Singhaniya - Copy.pdf',
     instagram: 'https://www.instagram.com/sarthak_shubh_?igsh=MWtsbGFnZHljejRoZA==',
     leetcode: 'https://leetcode.com/u/FYCfvXYnxf/',
@@ -17,230 +17,346 @@ export const profile = {
     googledev: 'https://g.dev/sarthaksinghaniya',
     techneekx: 'https://teamtechneekx.netlify.app'
   },
-  objective: 'Building intelligent systems that deliver measurable impact. Combining startup execution, hackathon momentum, and community leadership through TechNeekX.',
+  objective: 'AI Engineer and Full-Stack Developer with a strong focus on Generative AI, LLM applications, and Agentic AI. Passionate about building robust startup products and actively leading the TechNeekX developer community to foster innovation and hackathon excellence.',
   education: [
     {
-      title: 'B.Tech in Computer Science (AI Specialization)',
+      title: 'B.Tech Computer Science Engineering (Artificial Intelligence)',
       org: 'Babu Banarasi Das University',
-      period: '2024 – 2028 (Expected)',
+      period: '2024 - 2028',
       details: [
-        'Currently in second year, third semester',
-        'Combining academic learning with real-world AI and product development experience.'
+        'Currently pursuing B.Tech CSE AI specialization',
+        'Focus areas: Artificial Intelligence, Machine Learning, Full Stack Development, Cloud Computing, System Design, Competitive Programming'
       ]
     }
   ],
 };
 
-// GAME STATS (Used in Hero Dashboard)
 export const gameStats = {
-  level: 42,
-  playerClass: "AI Architect",
-  guild: "TechNeekX",
+  level: 55,
+  playerClass: "AI Engineer",
+  guild: "TechNeekX Community",
   stats: [
-    { label: "Projects Forged", value: "20+", icon: "FaCode" },
-    { label: "Hackathons Fought", value: "70+", icon: "FaTrophy" },
-    { label: "Medals Earned", value: "30+", icon: "FaMedal" },
-    { label: "Allies Buffed", value: "500+", icon: "FaUsers" }
+    { label: "Projects Built", value: "25+", icon: "FaCode" },
+    { label: "Hackathons", value: "70+", icon: "FaTrophy" },
+    { label: "LeetCode", value: "100+", icon: "FaCode" },
+    { label: "Community", value: "100+", icon: "FaUsers" }
   ],
   abilities: [
-    { id: 1, name: "Rapid Prototyping", type: "Passive", effect: "+50% Dev Speed", icon: "FaBolt", color: "emerald-magic" },
-    { id: 2, name: "Agentic Reasoning", type: "Active", effect: "LLM Integration", icon: "FaMagic", color: "blue-royal" }
+    { id: 1, name: "Agentic AI Engineering", type: "Active", effect: "LLM + RAG + Automation", icon: "FaMagic", color: "blue-royal" },
+    { id: 2, name: "Rapid Product Development", type: "Passive", effect: "AI × Full Stack", icon: "FaBolt", color: "emerald-magic" },
+    { id: 3, name: "Community Leadership", type: "Passive", effect: "Building Developer Ecosystems", icon: "FaUsers", color: "purple-mystic" }
   ]
 };
 
-// SKILLS INVENTORY (Gamified mapping of original skills)
 export const skills = [
-  { id: 1, name: 'Python', type: 'Weapon', rarity: 'Legendary', desc: 'Core ML language', projects: 12, stats: { pwr: 95, spd: 85, util: 100 }, icon: "FaPython", color: "emerald-magic" },
-  { id: 2, name: 'PyTorch', type: 'Artifact', rarity: 'Epic', desc: 'Deep learning framework', projects: 5, stats: { pwr: 98, spd: 70, util: 85 }, icon: "FaFire", color: "red-500" },
-  { id: 3, name: 'React', type: 'Shield', rarity: 'Epic', desc: 'Frontend UI library', projects: 8, stats: { pwr: 80, spd: 95, util: 90 }, icon: "FaReact", color: "blue-royal" },
-  { id: 4, name: 'Next.js', type: 'Armor', rarity: 'Legendary', desc: 'React framework', projects: 6, stats: { pwr: 90, spd: 90, util: 95 }, icon: "FaCode", color: "stone" },
-  { id: 5, name: 'Node.js', type: 'Relic', rarity: 'Rare', desc: 'Backend runtime', projects: 7, stats: { pwr: 85, spd: 90, util: 85 }, icon: "FaServer", color: "green-500" },
-  { id: 6, name: 'TensorFlow', type: 'Artifact', rarity: 'Epic', desc: 'Machine Learning', projects: 4, stats: { pwr: 92, spd: 75, util: 85 }, icon: "FaBrain", color: "orange-500" },
-  { id: 7, name: 'Docker', type: 'Container', rarity: 'Rare', desc: 'DevOps & Deployment', projects: 5, stats: { pwr: 80, spd: 85, util: 90 }, icon: "FaDocker", color: "blue-400" },
-  { id: 8, name: 'FastAPI', type: 'Scroll', rarity: 'Epic', desc: 'Python APIs', projects: 6, stats: { pwr: 85, spd: 100, util: 90 }, icon: "FaBolt", color: "yellow-500" }
+  { id: 1, name: 'Python', type: 'Languages', rarity: 'Legendary', desc: 'AI & Backend', projects: 15, stats: { pwr: 95, spd: 85, util: 100 }, icon: "FaPython", color: "emerald-magic" },
+  { id: 2, name: 'C++', type: 'Languages', rarity: 'Epic', desc: 'Competitive Programming', projects: 5, stats: { pwr: 90, spd: 90, util: 80 }, icon: "FaCode", color: "blue-royal" },
+  { id: 3, name: 'JavaScript', type: 'Languages', rarity: 'Legendary', desc: 'Frontend Logic', projects: 20, stats: { pwr: 85, spd: 95, util: 100 }, icon: "FaJs", color: "yellow-400" },
+  { id: 4, name: 'TypeScript', type: 'Languages', rarity: 'Epic', desc: 'Type-Safe Code', projects: 10, stats: { pwr: 85, spd: 90, util: 95 }, icon: "FaCode", color: "blue-500" },
+  
+  { id: 5, name: 'React', type: 'Frontend', rarity: 'Legendary', desc: 'UI Development', projects: 12, stats: { pwr: 85, spd: 90, util: 95 }, icon: "FaReact", color: "blue-400" },
+  { id: 6, name: 'Next.js', type: 'Frontend', rarity: 'Epic', desc: 'Full-Stack React', projects: 8, stats: { pwr: 90, spd: 85, util: 90 }, icon: "FaCode", color: "stone" },
+  { id: 7, name: 'Tailwind CSS', type: 'Frontend', rarity: 'Epic', desc: 'Styling', projects: 15, stats: { pwr: 80, spd: 100, util: 90 }, icon: "FaPaintBrush", color: "cyan-400" },
+  
+  { id: 8, name: 'Node.js', type: 'Backend', rarity: 'Epic', desc: 'JS Runtime', projects: 10, stats: { pwr: 85, spd: 90, util: 90 }, icon: "FaServer", color: "green-500" },
+  { id: 9, name: 'Express', type: 'Backend', rarity: 'Epic', desc: 'Web Framework', projects: 10, stats: { pwr: 80, spd: 95, util: 90 }, icon: "FaServer", color: "stone" },
+  { id: 10, name: 'FastAPI', type: 'Backend', rarity: 'Epic', desc: 'Python APIs', projects: 8, stats: { pwr: 90, spd: 100, util: 85 }, icon: "FaBolt", color: "emerald-500" },
+  { id: 11, name: 'Flask', type: 'Backend', rarity: 'Rare', desc: 'Microframework', projects: 5, stats: { pwr: 75, spd: 85, util: 80 }, icon: "FaPython", color: "stone" },
+  { id: 12, name: 'Django', type: 'Backend', rarity: 'Rare', desc: 'Full-Stack Python', projects: 3, stats: { pwr: 85, spd: 70, util: 85 }, icon: "FaCode", color: "green-600" },
+  
+  { id: 13, name: 'Machine Learning', type: 'AI/ML', rarity: 'Legendary', desc: 'Algorithms', projects: 10, stats: { pwr: 95, spd: 80, util: 95 }, icon: "FaBrain", color: "purple-mystic" },
+  { id: 14, name: 'Deep Learning', type: 'AI/ML', rarity: 'Epic', desc: 'Neural Networks', projects: 6, stats: { pwr: 98, spd: 70, util: 85 }, icon: "FaFire", color: "red-500" },
+  { id: 15, name: 'PyTorch', type: 'AI/ML', rarity: 'Epic', desc: 'DL Framework', projects: 5, stats: { pwr: 95, spd: 75, util: 90 }, icon: "FaCode", color: "orange-500" },
+  { id: 16, name: 'TensorFlow', type: 'AI/ML', rarity: 'Epic', desc: 'ML Platform', projects: 4, stats: { pwr: 90, spd: 80, util: 85 }, icon: "FaBrain", color: "orange-400" },
+  { id: 17, name: 'Scikit Learn', type: 'AI/ML', rarity: 'Rare', desc: 'ML Library', projects: 8, stats: { pwr: 80, spd: 90, util: 90 }, icon: "FaCode", color: "blue-400" },
+  { id: 18, name: 'OpenCV', type: 'AI/ML', rarity: 'Rare', desc: 'Computer Vision', projects: 5, stats: { pwr: 85, spd: 80, util: 85 }, icon: "FaEye", color: "green-400" },
+  { id: 19, name: 'NLP', type: 'AI/ML', rarity: 'Epic', desc: 'Text Processing', projects: 6, stats: { pwr: 90, spd: 85, util: 90 }, icon: "FaLanguage", color: "blue-300" },
+  { id: 20, name: 'Generative AI', type: 'AI/ML', rarity: 'Legendary', desc: 'LLMs & Generation', projects: 8, stats: { pwr: 100, spd: 85, util: 95 }, icon: "FaMagic", color: "purple-500" },
+  { id: 21, name: 'RAG', type: 'AI/ML', rarity: 'Epic', desc: 'Retrieval Augmented Gen', projects: 5, stats: { pwr: 95, spd: 85, util: 90 }, icon: "FaSearch", color: "stone" },
+  { id: 22, name: 'LangChain', type: 'AI/ML', rarity: 'Epic', desc: 'LLM Framework', projects: 4, stats: { pwr: 90, spd: 80, util: 90 }, icon: "FaLink", color: "green-500" },
+  
+  { id: 23, name: 'MongoDB', type: 'Databases', rarity: 'Epic', desc: 'NoSQL Database', projects: 12, stats: { pwr: 85, spd: 90, util: 95 }, icon: "FaDatabase", color: "green-400" },
+  { id: 24, name: 'MySQL', type: 'Databases', rarity: 'Rare', desc: 'Relational DB', projects: 8, stats: { pwr: 80, spd: 85, util: 90 }, icon: "FaDatabase", color: "blue-300" },
+  { id: 25, name: 'Firebase', type: 'Databases', rarity: 'Rare', desc: 'BaaS', projects: 6, stats: { pwr: 80, spd: 95, util: 90 }, icon: "FaFire", color: "yellow-500" },
+  
+  { id: 26, name: 'Docker', type: 'DevOps', rarity: 'Epic', desc: 'Containerization', projects: 5, stats: { pwr: 90, spd: 85, util: 90 }, icon: "FaDocker", color: "blue-500" },
+  { id: 27, name: 'Git', type: 'DevOps', rarity: 'Legendary', desc: 'Version Control', projects: 25, stats: { pwr: 85, spd: 95, util: 100 }, icon: "FaCodeBranch", color: "red-400" },
+  { id: 28, name: 'GitHub', type: 'DevOps', rarity: 'Legendary', desc: 'Code Hosting', projects: 25, stats: { pwr: 85, spd: 95, util: 100 }, icon: "FaGithub", color: "stone" },
+  { id: 29, name: 'Linux', type: 'DevOps', rarity: 'Epic', desc: 'OS', projects: 15, stats: { pwr: 90, spd: 80, util: 95 }, icon: "FaLinux", color: "stone" },
+  { id: 30, name: 'AWS', type: 'DevOps', rarity: 'Rare', desc: 'Cloud Services', projects: 3, stats: { pwr: 95, spd: 70, util: 85 }, icon: "FaCloud", color: "yellow-500" },
+  { id: 31, name: 'Vercel', type: 'DevOps', rarity: 'Epic', desc: 'Deployment', projects: 10, stats: { pwr: 80, spd: 100, util: 95 }, icon: "FaCloud", color: "stone" },
+  { id: 32, name: 'Netlify', type: 'DevOps', rarity: 'Rare', desc: 'Deployment', projects: 8, stats: { pwr: 80, spd: 95, util: 90 }, icon: "FaCloud", color: "cyan-500" }
 ];
 
-// EXPERIENCE CAMPAIGN
 export const experience = [
   {
     level: 6,
-    role: "Founder — TechNeekX",
+    role: "Founder & Community Lead",
     company: "TechNeekX",
-    period: "2025 – Present",
+    period: "2025 - Present",
     position: "bottom",
-    description: "Built and grew TechNeekX into a community of AI builders, hackathon teams, and early-stage founders.",
+    description: "Built and managed a 100+ member AI and developer community.",
     points: [
-      'Led product strategy, technical execution, and community programming for 100+ members.',
-      'Designed mentorship workflows, project pathways, and founder-focused launch support.',
-      'Delivered 4+ events including InnVedX, Kalpathon, and Vibe Designing.'
+      'Founded and scaled AI/developer community.',
+      'Organized TNX Codathon, technical events, workshops and networking sessions.',
+      'Led community operations, partnerships and innovation programs.',
+      'Mentored students in AI, development and innovation.',
+      'Created opportunities for collaboration and project building.'
     ]
   },
   {
     level: 5,
-    role: "Python Developer Intern",
-    company: "Woject Technologies",
-    period: "Dec 2025 – Mar 2026",
+    role: "ML Engineer Intern",
+    company: "DBERT",
+    period: "2 Months",
     position: "top",
-    description: "Developed and maintained Python-based APIs using FastAPI and Django.",
+    description: "Developed and optimized machine learning workflows and AI models.",
     points: [
-      'Implemented data processing pipelines and integrated machine learning workflows.',
-      'Delivered production-ready backend services for real-time analytics and reporting.'
+      'Worked on machine learning workflows.',
+      'Developed AI-based solutions and experiments.',
+      'Improved model pipelines and data processing.',
+      'Stipend: ₹5,000'
     ]
   },
   {
     level: 4,
     role: "Python Developer Intern",
-    company: "QSkill",
-    period: "Apr 2026 – May 2026",
+    company: "Woject Technologies",
+    period: "3 Months",
     position: "bottom",
-    description: "Built Python automation scripts and model deployment workflows.",
+    description: "Built scalable backend systems and Python applications.",
     points: [
-      'Collaborated with product and engineering teams to ship data-driven features.',
-      'Optimized backend infrastructure for reliability and performance.'
+      'Built Python applications and backend systems.',
+      'Developed APIs and automation workflows.',
+      'Worked with production-level development practices.',
+      'Stipend: ₹10,000'
     ]
   },
   {
     level: 3,
-    role: "Ex-Chairman, AI/ML Engineer",
-    company: "HanuBell",
-    period: "2024 – 2025",
+    role: "Python Developer Intern",
+    company: "QSkill",
+    period: "1 Month",
     position: "top",
-    description: "Spearheaded AI product development for education and community platforms.",
+    description: "Engineered automation solutions and handled backend tasks.",
     points: [
-      'Managed cross-functional engineering teams and architecture decisions.',
-      'Delivered multiple AI-enabled systems used by active platform users.'
+      'Developed Python automation solutions.',
+      'Worked on backend development tasks.'
     ]
   },
   {
     level: 2,
     role: "Content Writer",
     company: "CooknClean",
-    period: "Mar 2025 – Apr 2025",
+    period: "45 Days",
     position: "bottom",
-    description: "Created compelling product and service content for CooknClean’s digital channels.",
+    description: "Created technical and marketing content to improve digital presence.",
     points: [
-      'Collaborated with marketing and design teams to align messaging with brand voice.',
-      'Produced SEO-friendly articles and social copy to increase engagement.'
+      'Created technical and marketing content.',
+      'Improved digital communication strategy.'
     ]
   },
   {
     level: 1,
     role: "Campus Ambassador",
-    company: "EduVeda Academy",
-    period: "Nov 2025 – Dec 2025",
+    company: "E-Cell IIT Bombay",
+    period: "Tenure",
     position: "top",
-    description: "Organized campus workshops and technical training sessions.",
+    description: "Promoted entrepreneurship initiatives and connected students with startup opportunities.",
     points: [
-      'Served as a bridge between students and the academy for program growth.'
+      'Promoted entrepreneurship initiatives.',
+      'Connected students with startup ecosystem opportunities.'
     ]
   }
 ];
 
-// PROJECTS BATTLE CARDS
 export const projects = [
   {
-    slug: 'team-techneekx',
-    title: 'Team TechNeekX',
-    status: 'Active Deployment',
+    slug: 'ecosphere-ai',
+    title: 'EcoSphere AI',
+    status: 'Completed',
     rarity: 'Legendary',
     difficulty: 95,
-    impact: 100,
-    performance: 98,
-    description: "A professional team portfolio website showcasing TechNeekX's collective expertise and projects. Built as a centralized hub for client engagement.",
-    tech: ["React", "Next.js", "Tailwind CSS", "Netlify"],
-    links: { github: "#", demo: "https://teamtechneekx.netlify.app" },
-    achievements: ["Founded Community", "100+ Members"],
-    gradient: "from-[#2A1B38] via-[#4C1D95] to-[#7C4DFF]",
-    borderGlow: "rgba(124, 77, 255, 0.8)",
-    textColor: "text-purple-mystic",
-    architecture: "Frontend built with Next.js App Router for optimal SEO and performance. State management is handled through React Context. Styling relies entirely on Tailwind CSS for utility-first responsive design.",
-    challenges: "Creating a cohesive design language that represents all 100+ members of the community while keeping the bundle size small.",
-    highlights: [
-      "Founded and led the entire project from concept to deployment",
-      "Designed and implemented AI/ML solutions for team showcase",
-      "Created responsive, accessible interface with modern animations",
-      "Established scalable architecture for team collaboration features",
-      "Integrated real-time communication and project management tools"
-    ]
-  },
-  {
-    slug: 'revive-hub',
-    title: 'Revive-hub',
-    status: 'Completed',
-    rarity: 'Epic',
-    difficulty: 90,
     impact: 95,
-    performance: 92,
-    description: "An AI-powered platform revolutionizing e-waste management via computer vision. Identifies components and suggests upcycling options.",
-    tech: ["Python", "TensorFlow", "YOLOv8", "React", "Flask"],
-    links: { github: "#", demo: "https://revibe-hub.netlify.app" },
-    achievements: ["94.5% YOLOv8 Accuracy", "Reduced E-waste Processing"],
+    performance: 90,
+    description: "AI-powered environmental intelligence platform combining AI analytics, satellite insights and digital monitoring.",
+    tech: ["Python", "AI/ML", "Computer Vision", "React", "Cloud"],
+    links: { github: "#", demo: "#" },
+    achievements: ["Advanced AI Analytics", "Digital Monitoring"],
     gradient: "from-[#0F3B2E] via-[#122C34] to-[#1E3A8A]",
     borderGlow: "rgba(61, 220, 151, 0.8)",
     textColor: "text-emerald-magic",
-    architecture: "Microservices architecture utilizing Flask for the ML inference backend and React for the frontend dashboard. YOLOv8 models are served via TensorFlow Serving for rapid bounding box detection.",
-    challenges: "Training the YOLOv8 model on a highly imbalanced dataset of obscure electronic components. Resolved via advanced data augmentation and synthetic data generation.",
+    architecture: "Leverages Python-based AI models and Computer Vision for environmental analysis, served to a React frontend hosted on cloud infrastructure.",
+    challenges: "Integrating diverse satellite data formats and optimizing real-time computer vision inference.",
     highlights: [
-      "Developed a custom YOLOv8 model achieving 94.5% accuracy in component recognition",
-      "Implemented a knowledge graph to suggest repair and upcycling options",
-      "Reduced e-waste processing time by 60% through workflow automation",
-      "Integrated with IoT devices for real-time component analysis",
-      "Featured in 3 tech publications for innovation in sustainability"
+      "Built comprehensive AI pipelines for environmental data processing",
+      "Implemented an intuitive dashboard for digital monitoring",
+      "Integrated machine learning models for predictive analytics"
     ]
   },
   {
-    slug: 'hanu-youth',
-    title: 'HANU-Youth Platform',
-    status: 'Active Deployment',
-    rarity: 'Legendary',
-    difficulty: 85,
-    impact: 98,
-    performance: 90,
-    description: "A comprehensive learning ecosystem combining AI-powered education with community engagement. Features personalized learning paths and AI mentorship.",
-    tech: ["Next.js", "MongoDB", "TensorFlow.js", "WebRTC"],
-    links: { github: "#", demo: "https://hanuyouthapp.netlify.app" },
-    achievements: ["10,000+ Active Users", "45% Engagement Boost"],
-    gradient: "from-[#3B2A0C] via-[#2C1D34] to-[#4C1D95]",
-    borderGlow: "rgba(247, 201, 72, 0.8)",
-    textColor: "text-primary",
-    architecture: "Real-time communication handled via WebRTC for peer-to-peer mentoring. Content delivery is optimized using Next.js static generation with ISR. MongoDB stores user progress and embeddings for the recommendation engine.",
-    challenges: "Scaling the real-time collaboration features to support thousands of concurrent connections during peak hours.",
-    highlights: [
-      "Built a recommendation engine that improved user engagement by 45%",
-      "Integrated real-time collaborative coding with AI code review",
-      "Developed a custom NLP model for automated mentorship matching",
-      "Implemented gamification elements that increased user retention by 60%",
-      "Featured in Top 10 EdTech Innovations 2025 by TechCrunch"
-    ]
-  },
-  {
-    slug: 'hanu-planner-ai',
-    title: 'Hanu-Planner AI',
-    status: 'Active Deployment',
+    slug: 'revibe-hub',
+    title: 'Revibe Hub',
+    status: 'Completed',
     rarity: 'Epic',
-    difficulty: 92,
+    difficulty: 90,
     impact: 90,
     performance: 95,
-    description: "An intelligent scheduling system using constraint satisfaction algorithms and ML to optimize timetables for educational institutions.",
-    tech: ["Python", "FastAPI", "React", "Optuna"],
-    links: { github: "#", demo: "https://hanu-planner.netlify.app" },
-    achievements: ["95% Less Conflicts", "Used by 3 Universities"],
+    description: "AI-based e-waste identification and recycling assistant using computer vision.",
+    tech: ["Python", "YOLO", "TensorFlow", "Flask", "React"],
+    links: { github: "https://github.com/sarthaksinghaniya/revibe-ai", demo: "https://revibe-hub.vercel.app" },
+    achievements: ["Accurate Object Detection", "E-waste Mitigation"],
+    gradient: "from-[#2A1B38] via-[#4C1D95] to-[#7C4DFF]",
+    borderGlow: "rgba(124, 77, 255, 0.8)",
+    textColor: "text-purple-mystic",
+    architecture: "Uses YOLO and TensorFlow models wrapped in a Flask API to detect e-waste, communicating with a React frontend.",
+    challenges: "Training the object detection model on diverse and obscured e-waste component images.",
+    highlights: [
+      "Deployed YOLO model for real-time component identification",
+      "Developed a user-friendly React application for recycling suggestions",
+      "Built robust API endpoints using Flask for model serving"
+    ]
+  },
+  {
+    slug: 'hospital-pulse-ai',
+    title: 'Hospital Pulse AI',
+    status: 'Completed',
+    rarity: 'Legendary',
+    difficulty: 92,
+    impact: 95,
+    performance: 92,
+    description: "Healthcare intelligence platform for monitoring hospital operations and generating AI-driven insights.",
+    tech: ["Python", "Machine Learning", "React", "Node.js", "MongoDB"],
+    links: { github: "https://github.com/sarthaksinghaniya/Hospital-Pulse-AI", demo: "#" },
+    achievements: ["Operational Efficiency", "Data-Driven Insights"],
     gradient: "from-[#1a1c29] via-[#3a2e39] to-[#6b4c5a]",
     borderGlow: "rgba(255, 255, 255, 0.8)",
     textColor: "text-stone",
-    architecture: "Backend driven by Python FastAPI for high-throughput solving. Optuna is utilized for hyperparameter optimization of the genetic algorithms responsible for timetable generation.",
-    challenges: "Translating complex human constraints into mathematical constraints that the genetic algorithm could optimize against.",
+    architecture: "Full-stack application using Node.js and MongoDB, with a React frontend and Python-based ML services for generating operational insights.",
+    challenges: "Ensuring secure handling of operational data while maintaining real-time processing capabilities.",
     highlights: [
-      "Developed a custom genetic algorithm that reduced scheduling conflicts by 95%",
-      "Integrated with existing university systems through a robust API layer",
-      "Created a predictive model for room allocation with 98% accuracy",
-      "Reduced timetable generation time from 8 hours to under 5 minutes",
-      "Currently used by 3 universities with plans for national expansion"
+      "Developed analytics dashboards for hospital administrators",
+      "Implemented ML algorithms for predictive resource allocation",
+      "Designed a scalable architecture for handling concurrent institutional data"
+    ]
+  },
+  {
+    slug: 'cm-dashboard',
+    title: 'CM Dashboard',
+    status: 'MVP Completed',
+    rarity: 'Epic',
+    difficulty: 85,
+    impact: 90,
+    performance: 88,
+    description: "A real-time complaint management system allowing users to submit, track and resolve grievances efficiently.",
+    tech: ["React", "Node.js", "Express", "MongoDB"],
+    links: { github: "https://github.com/sarthaksinghaniya/CM-Dashboard", demo: "#" },
+    achievements: ["Real-time Tracking", "Role-based Access"],
+    gradient: "from-[#3B2A0C] via-[#2C1D34] to-[#4C1D95]",
+    borderGlow: "rgba(247, 201, 72, 0.8)",
+    textColor: "text-primary",
+    architecture: "MERN stack architecture with role-based access control, real-time database updates, and dashboard analytics components.",
+    challenges: "Structuring the database to efficiently handle varying complaint hierarchies and role-based permissions.",
+    highlights: [
+      "Implemented comprehensive complaint tracking lifecycle",
+      "Built dynamic dashboard analytics for authorities",
+      "Integrated secure role-based management and real-time updates"
+    ]
+  },
+  {
+    slug: 'ttm-ai',
+    title: 'TTM-AI',
+    status: 'Active Deployment',
+    rarity: 'Legendary',
+    difficulty: 90,
+    impact: 92,
+    performance: 95,
+    description: "An advanced AI text-to-model platform utilizing generative deep learning techniques to transform user prompts into structured models.",
+    tech: ["Python", "Generative AI", "PyTorch", "FastAPI", "React"],
+    links: { github: "https://github.com/sarthaksinghaniya/TTM-AI", demo: "#" },
+    achievements: ["GenAI Implementation", "Rapid Prototyping"],
+    gradient: "from-[#2A1B38] via-[#4C1D95] to-[#7C4DFF]",
+    borderGlow: "rgba(124, 77, 255, 0.8)",
+    textColor: "text-purple-mystic",
+    architecture: "Utilizes PyTorch for generative model inference hosted on FastAPI, paired with a React frontend for intuitive prompt engineering.",
+    challenges: "Optimizing model latency during complex generative tasks to ensure a smooth user experience.",
+    highlights: [
+      "Integrated state-of-the-art generative AI techniques",
+      "Designed an interactive prompt interface",
+      "Optimized backend processes for low-latency inference"
+    ]
+  },
+  {
+    slug: 'titan',
+    title: 'Titan',
+    status: 'Completed',
+    rarity: 'Epic',
+    difficulty: 88,
+    impact: 90,
+    performance: 92,
+    description: "A robust software utility built to streamline and automate complex development workflows using AI-driven code analysis.",
+    tech: ["Python", "LLMs", "Node.js", "Docker"],
+    links: { github: "https://github.com/sarthaksinghaniya/Titan", demo: "#" },
+    achievements: ["Workflow Automation", "Code Analysis"],
+    gradient: "from-[#0F3B2E] via-[#122C34] to-[#1E3A8A]",
+    borderGlow: "rgba(61, 220, 151, 0.8)",
+    textColor: "text-emerald-magic",
+    architecture: "A containerized Node.js application that orchestrates Python-based LLM agents for deep code analysis and refactoring tasks.",
+    challenges: "Designing abstract syntax tree parsers that work seamlessly alongside probabilistic LLM outputs.",
+    highlights: [
+      "Built an AI-driven agent for automated codebase analysis",
+      "Containerized services using Docker for easy deployment",
+      "Improved developer productivity by automating repetitive tasks"
+    ]
+  },
+  {
+    slug: 'flowx',
+    title: 'FlowX',
+    status: 'Active',
+    rarity: 'Epic',
+    difficulty: 85,
+    impact: 88,
+    performance: 90,
+    description: "An intuitive workflow automation platform empowering users to connect disparate APIs and services without complex coding.",
+    tech: ["React", "TypeScript", "Node.js", "Express"],
+    links: { github: "https://github.com/sarthaksinghaniya/FlowX", demo: "#" },
+    achievements: ["API Integration", "Visual Workflow Editor"],
+    gradient: "from-[#1a1c29] via-[#3a2e39] to-[#6b4c5a]",
+    borderGlow: "rgba(255, 255, 255, 0.8)",
+    textColor: "text-stone",
+    architecture: "Frontend visual node editor built in React and TypeScript, connected to an Express backend that executes API webhooks and data transformations.",
+    challenges: "Creating a lag-free visual node editor that can handle dozens of interconnected service nodes.",
+    highlights: [
+      "Developed a drag-and-drop workflow canvas",
+      "Implemented robust error handling for third-party API failures",
+      "Created an extensible plugin system for adding new service integrations"
+    ]
+  },
+  {
+    slug: 'lexnode-ai',
+    title: 'LexNode AI',
+    status: 'Active',
+    rarity: 'Legendary',
+    difficulty: 94,
+    impact: 95,
+    performance: 93,
+    description: "An intelligent document processing and knowledge extraction engine utilizing Retrieval-Augmented Generation (RAG) and LangChain.",
+    tech: ["Python", "LangChain", "RAG", "VectorDB", "FastAPI"],
+    links: { github: "https://github.com/sarthaksinghaniya/lxnode-AI", demo: "#" },
+    achievements: ["Semantic Search", "Document Intelligence"],
+    gradient: "from-[#3B2A0C] via-[#2C1D34] to-[#4C1D95]",
+    borderGlow: "rgba(247, 201, 72, 0.8)",
+    textColor: "text-primary",
+    architecture: "Uses FastAPI to serve LangChain pipelines backed by a vector database, enabling precise semantic search and natural language querying over vast document stores.",
+    challenges: "Optimizing vector embedding retrieval times and handling varied document formats (PDFs, Word, text).",
+    highlights: [
+      "Implemented a comprehensive RAG pipeline for high-accuracy answers",
+      "Integrated LangChain for dynamic agent reasoning",
+      "Built a scalable ingestion system for continuous document updates"
     ]
   }
 ];
 
-// CERTIFICATES HALL OF RECORDS
 export const certifications = [
   { id: 1, title: "Machine Learning Using Python", issuer: "Tech", category: "AI", imgText: "ML+Using+Python" },
   { id: 2, title: "Google Cloud – Intro to Gen AI Studio", issuer: "Google", category: "AI", imgText: "Google+Gen+AI" },
@@ -253,26 +369,19 @@ export const certifications = [
 ];
 
 export const achievements = [
-  'IIM Mumbai – Shark Tank Event Participant: Pitched startup ideas in a competitive environment, receiving valuable feedback from industry experts.',
-  'Top 2 National Finalist: Secured 2nd place at DAIICT Repo Robot Hackathon among 100+ teams.',
-  'Final Round Qualifier: Reached the final round of IDEAthon at LMNIT Jaipur, competing among top innovators.',
-  'Kaggle Excellence: Earned multiple certificates and badges in data science competitions and machine learning challenges.',
-  'LeetCode Achievement: Unlocked problem-solving badges and maintained consistent daily streak with 350+ problems solved.',
-  'IIT Madras AI Hackathon: Qualified for the final round in the prestigious Visa 24 AI Hackathon at IIT Madras.',
-  'Google Gemini AI Crew: Participated in the exclusive AI Crew Google Gemini event, exploring cutting-edge AI technologies.',
-  'IIT Kharagpur Data Science: Competed in the Data Science Hackathon at IIT Kharagpur, showcasing advanced analytics skills.',
-  'HackX Finalist: Reached the final round in HackX Hackathon, demonstrating innovation and technical excellence.',
-  'Unstop Top Performer: Achieved high rankings and consistent performance across multiple competitions on Unstop platform.',
-  'Professional Experience: Completed three internships, gaining practical industry experience in AI/ML and software development.',
-  'GIM Goa Healthcare: Reached semifinals in the Abhivridhi healthcare event at GIM Goa, focusing on healthcare innovation.',
-  'IIM Lucknow ValQuest: Participated in the ValQuest event at IIM Lucknow, competing in business strategy challenges.',
-  'IIT Patna E-Summit: Finalist in the E-Summit entrepreneurship event at IIT Patna, presenting startup ideas.',
-  'ByteQuest Coding Challenge: Reached finals in the intense 24-hour ByteQuest coding competition.',
-  'IIT Jodhpur Prompt Engineering: Participated in the prompt engineering hackathon at IIT Jodhpur, exploring AI prompt optimization.',
-  'LMNIT Jaipur Shark Tank: Finalist in the Shark Tank startup round at LMNIT Jaipur, securing recognition for innovative business ideas.',
-  'International Hackathon Participant: Competed in UNESCO Youth Hackathon, collaborating with global participants on innovative solutions.',
-  'NIT Silchar Hackathon: Qualified for Round 2 in competitive national-level hackathon.',
-  'Participated in 25+ national and international hackathons in 2025-2026. ',
-  'Aptitude & Quiz Champion: Strong performance in ICAT and Tata TruBall Campus Quiz competitions.',
-  'Technical Content Creator: Published articles and tutorials on AI/ML and web development topics.'
+  'HackBio IIT Mandi Winner',
+  'Founder TechNeekX',
+  '70+ Hackathons Participated',
+  'IIT Bombay E-Cell Campus Ambassador',
+  '5 Industry Internships',
+  '100+ LeetCode Problems Solved',
+  '300+ Unstop Problems/Challenges',
+  'IIT Madras AI Hackathon Participant',
+  'IIT Patna E-Summit Finalist',
+  'IIT Kharagpur Data Science Participant',
+  'IIM Lucknow Participant',
+  'LMNIT Jaipur Finalist',
+  'Google AI Events Participant',
+  'Kaggle Contributor',
+  'National Hackathon Finalist'
 ];
